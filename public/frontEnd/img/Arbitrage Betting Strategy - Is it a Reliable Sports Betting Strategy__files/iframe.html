@@ -1,0 +1,82 @@
+
+<!-- saved from url=(0134)https://pixel.mathtag.com/sync/iframe?mt_uuid=08ac62cc-77d5-4300-a79d-4975dd2ad994&no_iframe=1&mt_adid=253604&mt_lim=20&source=mathtag -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+<script type="text/javascript">
+try {
+   /**/
+(function() {
+    try {
+	var sync_4815162342 = function() {
+this.urls = [
+[0, "https://pixel.mathtag.com/misc/img?mop_seq=0:13&mt_cb=786215&mop_top="],
+[17, "https://ce.lijit.com/merge?pid=3&3pid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[39, "https://rtb-csync.smartadserver.com/redir/?partnerid=25&partneruserid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[10041, "https://uip.semasio.net/mediamath/1/info?sType=sync&sExtCookieId=08ac62cc-77d5-4300-a79d-4975dd2ad994&sInitiator=external"],
+[10092, "https://mwzeom.zeotap.com/mw?cid=08ac62cc-77d5-4300-a79d-4975dd2ad994&env=mWeb&zpartnerid=979&zdid=979"],
+[26, "https://ih.adscale.de/adscale-ih/tpui?tpid=39&tpuid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[50, "https://ad.sxp.smartclip.net/sync?type=host&dsp=40&dspuuid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[10025, "https://su.addthis.com/red/usync?pid=11112&puid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[10031, "https://usermatch.krxd.net/um/v2?partner=mediamath"],
+[36, "https://i.liadm.com/s/37464?bidder_id=7156&bidder_uuid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[10040, "https://sync.crwdcntrl.net/qmap?c=4735&tp=MDMA&tpid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[0, "https://pixel.mathtag.com/misc/img?mop_seq=10:13&mt_cb=744701&mop_top=17:1674991015|39:1674991015|10041:1674991015|10092:1674991015|26:1674991015|50:1674991015|10025:1674991015|10031:1674991015|36:1674991015|10040:1674991015|"],
+[10004, "https://dpm.demdex.net/ibs:dpid=269&dpuuid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[10009, "https://aa.agkn.com/adscores/g.pixel?sid=9211132948&mt=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[10089, "https://id5-sync.com/s/3/9.gif?puid=08ac62cc-77d5-4300-a79d-4975dd2ad994"],
+[0, "https://pixel.mathtag.com/misc/img?mop_seq=13:13&mt_cb=458007&check=08ac62cc-77d5-4300-a79d-4975dd2ad994&mop_top=17:1674991015|39:1674991015|10041:1674991015|10092:1674991015|26:1674991015|50:1674991015|10025:1674991015|10031:1674991015|36:1674991015|10040:1674991015|10004:1674991015|10009:1674991015|10089:1674991015|"]
+]
+this.progress = 0;
+	    var self = this;
+	    var tims = "";
+	    var errs = "";
+	    this.sync = function(i) {
+                var e = new Image();
+                var now = new Date();
+            if (e.addEventListener) {
+                e.addEventListener('load', function() {
+                    var temp = new Date().getTime() - now.getTime(); tims += self.urls[i][0]+':'+temp+"|";
+                });
+                e.addEventListener('error', function() {
+                    var temp = new Date().getTime() - now.getTime(); errs += self.urls[i][0]+':'+temp+"|";
+                });
+            }
+		    e.src = self.urls[i][1];
+	    }
+	    this.batch = function(){
+		    for (var i = self.progress; i < self.urls.length; ++i){
+		        self.sync(i);
+		    }
+	    }
+	    this.final = function(){
+            var e = new Image();
+            e.src = self.urls[self.urls.length-1][1]+"&final&timings="+tims+"&errors="+errs;
+	    }
+	    this.some = function(howmany){
+            var count = 0;
+            for (var i = self.progress; i < self.urls.length && count < howmany; ++i){
+                self.sync(i);
+                self.progress++;
+                count++;
+		    }
+	    }
+	}
+	var s_4815162342 = new sync_4815162342();
+	s_4815162342.some(1);
+	setTimeout(function(){s_4815162342.some(2);}, 1000);
+	setTimeout(s_4815162342.batch, 3000);
+	setTimeout(s_4815162342.final, 10000);
+    }
+    catch(ex) {
+	  new Image().src="//pixel.mathtag.com/error/img?error_domain=syncjs&what="+encodeURIComponent(ex.message);
+    }
+})();
+
+}
+catch(ex)
+{
+   new Image().src="//pixel.mathtag.com/error/img?error_domain=wrap_iframe&what="+encodeURIComponent(ex.message);
+}
+</script>
+
+
+</body></html>

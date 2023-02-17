@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-O_placeholder">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="O_placeholder" data-name="O placeholder" clip-path="url(#clip-O_placeholder)">
+    <path id="Path_2" data-name="Path 2" d="M556.546,327.32A128.713,128.713,0,0,0,567.277,300.5l33.471-116.919q11.4-39.188-2.95-53.638-12.706-13.072-54.656-13.069H457.864q-28.2,0-44.808,5.159-26.243,8.259-39.191,31.636-6.67,12.039-11.758,29.912L328.654,300.439h50.313L241.59,364.458H472.36q28.189,0,44.8-5.159,26.43-8.592,39.383-31.979ZM490.589,300.5H405.32L438.6,183.933H552.755l-34.533,19.811Z" transform="translate(-231.59 9.474)" fill="#708baa" fill-rule="evenodd"/>
+    <path id="Path_3" data-name="Path 3" d="M662.386,244.324,770.358,117.978H698.613Z" transform="translate(-280.358 8.273)" fill="#708baa"/>
+  </g>
+</svg>
