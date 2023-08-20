@@ -6,11 +6,11 @@
     <title>Stories - Personal Blog HTML Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/theme/favicon.html">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('static')}}/assets/imgs/theme/favicon.html">
     <!-- NewsBoard CSS  -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/widgets.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="{{asset('static')}}/assets/css/style.css">
+    <link rel="stylesheet" href="{{asset('static')}}/assets/css/widgets.css">
+    <link rel="stylesheet" href="{{asset('static')}}/assets/css/responsive.css">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
                             <div class="d-flex hover-up-2 transition-normal">
                                 <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                     <a class="color-white" href="single.html">
-                                        <img src="assets/imgs/news/thumb-1.jpg" alt="">
+                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="post-content media-body">
@@ -61,7 +61,7 @@
                             <div class="d-flex hover-up-2 transition-normal">
                                 <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                     <a class="color-white" href="single.html">
-                                        <img src="assets/imgs/news/thumb-2.jpg" alt="">
+                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="post-content media-body">
@@ -77,7 +77,7 @@
                             <div class="d-flex hover-up-2 transition-normal">
                                 <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                     <a class="color-white" href="single.html">
-                                        <img src="assets/imgs/news/thumb-3.jpg" alt="">
+                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
                                     </a>
                                 </div>
                                 <div class="post-content media-body">
@@ -98,7 +98,7 @@
                     <h5 class="mt-5 mb-30">Advertise banner</h5>
                 </div>
                 <a href="https://themeforest.net/user/alithemes/portfolio" target="_blank">
-                    <img class="advertise-img border-radius-5" src="assets/imgs/ads/ads-1.jpg" alt="">
+                    <img class="advertise-img border-radius-5" src="{{asset('static')}}/assets/imgs/ads/ads-1.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -109,7 +109,7 @@
             <div class="container">
                 <div class="row pt-20 pb-20">
                     <div class="col-md-3 col-xs-6">
-                        <a href="index.html"><img class="logo" src="assets/imgs/theme/logo.png" alt=""></a>
+                        <a href="index.html"><img class="logo" src="{{asset('static')}}/assets/imgs/theme/logo.png" alt=""></a>
                     </div>
                     <div class="col-md-9 col-xs-6 text-right header-top-right ">
                         <ul class="list-inline nav-topbar d-none d-md-inline">
@@ -276,7 +276,7 @@
                         <div class="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
                             <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                 <a class="color-white" href="single.html">
-                                    <img src="assets/imgs/news/thumb-2.jpg" alt="">
+                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
                                 </a>
                             </div>
                             <div class="post-content media-body">
@@ -289,7 +289,7 @@
                         <div class="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
                             <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                 <a class="color-white" href="single.html">
-                                    <img src="assets/imgs/news/thumb-4.jpg" alt="">
+                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-4.jpg" alt="">
                                 </a>
                             </div>
                             <div class="post-content media-body">
@@ -302,7 +302,7 @@
                         <div class="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
                             <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                 <a class="color-white" href="single.html">
-                                    <img src="assets/imgs/news/thumb-3.jpg" alt="">
+                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
                                 </a>
                             </div>
                             <div class="post-content media-body">
@@ -316,7 +316,7 @@
         </div>
     </div>
     <!-- Start Main content -->
-    
+
     <main  class="bg-grey pb-30">       
         <div class="container pt-30">
             <div class="featured-slider-3 position-relative">
@@ -324,7 +324,7 @@
                 <div class="featured-slider-3-items">
                     <div class="slider-single overflow-hidden border-radius-10">
                         <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url(assets/imgs/news/news-16.jpg)">
+                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-16.jpg)">
                                 <div class="post-content-overlay">
                                     <div class="container">
                                         <div class="entry-meta meta-0 font-small mb-20">
@@ -345,7 +345,7 @@
                     </div>
                     <div class="slider-single overflow-hidden border-radius-10">
                         <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url(assets/imgs/news/news-17.jpg)">
+                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-17.jpg)">
                                 <div class="post-content-overlay">
                                     <div class="container">
                                         <div class="entry-meta meta-0 font-small mb-20">
@@ -366,7 +366,7 @@
                     </div>
                     <div class="slider-single overflow-hidden border-radius-10">
                         <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url(assets/imgs/news/news-18.jpg)">
+                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-18.jpg)">
                                 <div class="post-content-overlay">
                                     <div class="container">
                                         <div class="entry-meta meta-0 font-small mb-20">
@@ -386,7 +386,7 @@
                     </div>
                     <div class="slider-single overflow-hidden border-radius-10">
                         <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url(assets/imgs/news/news-19.jpg)">
+                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-19.jpg)">
                                 <div class="post-content-overlay">
                                     <div class="container">
                                         <div class="entry-meta meta-0 font-small mb-20">
@@ -430,53 +430,69 @@
             </div>
             <div class="loop-grid mb-30">
                 <div class="row">
-                    <div class="col-lg-8 mb-30">
-                        <div class="carausel-post-1 hover-up border-radius-10 overflow-hidden transition-normal position-relative wow fadeInUp animated">
-                            <div class="arrow-cover"></div>
-                            <div class="slide-fade">
-                                <div class="position-relative post-thumb">
-                                    <div class="thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-4.jpg)">
-                                        <a class="img-link" href="single.html"></a>
-                                        <span class="top-left-icon bg-warning"><i class="elegant-icon icon_star_alt"></i></span>
-                                        <div class="post-content-overlay text-white ml-30 mr-30 pb-30">
-                                            <div class="entry-meta meta-0 font-small mb-20">
-                                                <a href="category.html"><span class="post-cat text-info text-uppercase">Travel</span></a>
-                                                <a href="category.html"><span class="post-cat text-success text-uppercase">Animal</span></a>
-                                            </div>
-                                            <h3 class="post-title font-weight-900 mb-20">
-                                                <a class="text-white" href="single.html">Beachmaster Elephant Seal Fights off Rival Male, The match is uncompromising</a>
-                                            </h3>
-                                            <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                                <span class="post-on">20 minutes ago</span>
-                                                <span class="hit-count has-dot">23k Views</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-1.jpg)">
+                                <a class="img-link" href="single.html"></a>
+                                <span class="top-right-icon bg-success"><i class="elegant-icon icon_camera_alt"></i></span>
+                                <ul class="social-share">
+                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
+                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
+                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
+                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="category.html"><span class="post-cat text-info">Travel</span></a>
+                                    <a href="category.html"><span class="post-cat text-success">Food</span></a>
                                 </div>
-                                <div class="position-relative post-thumb">
-                                    <div class="thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-6.jpg)">
-                                        <a class="img-link" href="single.html"></a>
-                                        <span class="top-left-icon bg-danger"><i class="elegant-icon icon_image"></i></span>
-                                        <div class="post-content-overlay text-white ml-30 mr-30 pb-30">
-                                            <div class="entry-meta meta-0 font-small mb-20">
-                                                <a href="category.html"><span class="post-cat text-info text-uppercase">Lifestyle</span></a>
-                                            </div>
-                                            <h3 class="post-title font-weight-900 mb-20">
-                                                <a class="text-white" href="single.html">This genius photo experiment shows we are all just sheeple in the consumer matrix</a>
-                                            </h3>
-                                            <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                                <span class="post-on">26 August 2020</span>
-                                                <span class="hit-count has-dot">18k Views</span>
-                                            </div>
-                                        </div>
+                                <div class="d-flex post-card-content">
+                                    <h5 class="post-title mb-20 font-weight-900">
+                                        <a href="single.html">Want fluffy Japanese pancakes but can’t fly to Tokyo?</a>
+                                    </h5>
+                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                        <span class="post-on">27 August</span>
+                                        <span class="time-reading has-dot">12 mins read</span>
+                                        <span class="post-by has-dot">23k views</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </article>
                     <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
                         <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-1.jpg)">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-1.jpg)">
+                                <a class="img-link" href="single.html"></a>
+                                <span class="top-right-icon bg-success"><i class="elegant-icon icon_camera_alt"></i></span>
+                                <ul class="social-share">
+                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
+                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
+                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
+                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="post-content p-30">
+                                <div class="entry-meta meta-0 font-small mb-10">
+                                    <a href="category.html"><span class="post-cat text-info">Travel</span></a>
+                                    <a href="category.html"><span class="post-cat text-success">Food</span></a>
+                                </div>
+                                <div class="d-flex post-card-content">
+                                    <h5 class="post-title mb-20 font-weight-900">
+                                        <a href="single.html">Want fluffy Japanese pancakes but can’t fly to Tokyo?</a>
+                                    </h5>
+                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
+                                        <span class="post-on">27 August</span>
+                                        <span class="time-reading has-dot">12 mins read</span>
+                                        <span class="post-by has-dot">23k views</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
+                        <div class="post-card-1 border-radius-10 hover-up">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-1.jpg)">
                                 <a class="img-link" href="single.html"></a>
                                 <span class="top-right-icon bg-success"><i class="elegant-icon icon_camera_alt"></i></span>
                                 <ul class="social-share">
@@ -506,7 +522,7 @@
                     </article>
                     <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
                         <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-7.jpg)">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-7.jpg)">
                                 <a class="img-link" href="single.html"></a>
                                 <ul class="social-share">
                                     <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
@@ -534,7 +550,7 @@
                     </article>
                     <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
                         <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-9.jpg)">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-9.jpg)">
                                 <a class="img-link" href="single.html"></a>
                                 <ul class="social-share">
                                     <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
@@ -562,7 +578,7 @@
                     </article>
                     <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.4s">
                         <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-11.jpg)">
+                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-11.jpg)">
                                 <a class="img-link" href="single.html"></a>
                                 <span class="top-right-icon bg-info"><i class="elegant-icon icon_headphones"></i></span>
                                 <ul class="social-share">
@@ -604,7 +620,7 @@
                                 <div class="row">
                                     <article class="col-md-6 mb-40 wow fadeInUp  animated">
                                         <div class="post-card-1 border-radius-10 hover-up">
-                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-6.jpg)">
+                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-6.jpg)">
                                                 <a class="img-link" href="single.html"></a>
                                                 <ul class="social-share">
                                                     <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
@@ -636,7 +652,7 @@
                                     </article>
                                     <article class="col-md-6 mb-40 wow fadeInUp  animated">
                                         <div class="post-card-1 border-radius-10 hover-up">
-                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-8.jpg)">
+                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-8.jpg)">
                                                 <a class="img-link" href="single.html"></a>
                                                 <ul class="social-share">
                                                     <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
@@ -667,7 +683,7 @@
                                     </article>
                                     <article class="col-md-6 mb-40 wow fadeInUp  animated">
                                         <div class="post-card-1 border-radius-10 hover-up">
-                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-10.jpg)">
+                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-10.jpg)">
                                                 <a class="img-link" href="single.html"></a>
                                                 <span class="top-right-icon bg-secondary"><i class="elegant-icon icon_heart_alt"></i></span>
                                                 <ul class="social-share">
@@ -699,7 +715,7 @@
                                     </article>
                                     <article class="col-md-6 mb-40 wow fadeInUp  animated">
                                         <div class="post-card-1 border-radius-10 hover-up">
-                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url(assets/imgs/news/news-12.jpg)">
+                                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-12.jpg)">
                                                 <a class="img-link" href="single.html"></a>
                                                 <ul class="social-share">
                                                     <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
@@ -740,7 +756,7 @@
                                     <div class="row mb-40 list-style-2">
                                         <div class="col-md-4">
                                             <div class="post-thumb position-relative border-radius-5">
-                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url(assets/imgs/news/news-13.jpg)">
+                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-13.jpg)">
                                                     <a class="img-link" href="single.html"></a>
                                                 </div>
                                                 <ul class="social-share">
@@ -773,7 +789,7 @@
                                     <div class="row mb-40 list-style-2">
                                         <div class="col-md-4">
                                             <div class="post-thumb position-relative border-radius-5">
-                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url(assets/imgs/news/news-4.jpg)">
+                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-4.jpg)">
                                                     <a class="img-link" href="single.html"></a>
                                                 </div>
                                                 <ul class="social-share">
@@ -805,7 +821,7 @@
                                     <div class="row mb-40 list-style-2">
                                         <div class="col-md-4">
                                             <div class="post-thumb position-relative border-radius-5">
-                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url(assets/imgs/news/news-2.jpg)">
+                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-2.jpg)">
                                                     <a class="img-link" href="single.html"></a>
                                                 </div>
                                                 <ul class="social-share">
@@ -837,7 +853,7 @@
                                     <div class="row mb-40 list-style-2">
                                         <div class="col-md-4">
                                             <div class="post-thumb position-relative border-radius-5">
-                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url(assets/imgs/news/news-3.jpg)">
+                                                <div class="img-hover-slide border-radius-5 position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-3.jpg)">
                                                     <a class="img-link" href="single.html"></a>
                                                 </div>
                                                 <ul class="social-share">
@@ -883,7 +899,7 @@
                     <div class="col-lg-4">
                         <div class="widget-area">
                             <div class="sidebar-widget widget-about mb-50 pt-30 pr-30 pb-30 pl-30 bg-white border-radius-5 has-border  wow fadeInUp animated">
-                                <img class="about-author-img mb-25" src="assets/imgs/authors/author.jpg" alt="">
+                                <img class="about-author-img mb-25" src="{{asset('static')}}/assets/imgs/authors/author.jpg" alt="">
                                 <h5 class="mb-20">Hello, I'm Steven</h5>
                                 <p class="font-medium text-muted">Hi, I’m Stenven, a Florida native, who left my career in corporate wealth management six years ago to embark on a summer of soul searching that would change the course of my life forever.</p>
                                 <strong>Follow me: </strong>
@@ -910,7 +926,7 @@
                                                 </div>
                                                 <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/news/thumb-6.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-6.jpg" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -926,7 +942,7 @@
                                                 </div>
                                                 <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/news/thumb-7.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-7.jpg" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -942,7 +958,7 @@
                                                 </div>
                                                 <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/news/thumb-2.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -958,7 +974,7 @@
                                                 </div>
                                                 <div class="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/news/thumb-3.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
                                                     </a>
                                                 </div>
                                             </div>
@@ -976,7 +992,7 @@
                                             <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
                                                 <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/authors/author-2.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/authors/author-2.jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="post-content media-body">
@@ -991,7 +1007,7 @@
                                             <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
                                                 <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/authors/author-3.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/authors/author-3.jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="post-content media-body">
@@ -1006,7 +1022,7 @@
                                             <div class="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
                                                 <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                                     <a class="color-white" href="single.html">
-                                                        <img src="assets/imgs/news/thumb-1.jpg" alt="">
+                                                        <img src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="post-content media-body">
@@ -1027,22 +1043,22 @@
                                 <div class="instagram-gellay">
                                     <ul class="insta-feed">
                                         <li>
-                                            <a href="assets/imgs/thumbnail-3.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="assets/imgs/news/thumb-1.jpg" alt=""></a>
+                                            <a href="{{asset('static')}}/assets/imgs/thumbnail-3.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt=""></a>
                                         </li>
                                         <li>
-                                            <a href="assets/imgs/thumbnail-4.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="assets/imgs/news/thumb-2.jpg" alt=""></a>
+                                            <a href="{{asset('static')}}/assets/imgs/thumbnail-4.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt=""></a>
                                         </li>
                                         <li>
-                                            <a href="assets/imgs/thumbnail-5.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="assets/imgs/news/thumb-3.jpg" alt=""></a>
+                                            <a href="{{asset('static')}}/assets/imgs/thumbnail-5.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt=""></a>
                                         </li>
                                         <li>
-                                            <a href="assets/imgs/thumbnail-3.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="assets/imgs/news/thumb-4.jpg" alt=""></a>
+                                            <a href="{{asset('static')}}/assets/imgs/thumbnail-3.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="{{asset('static')}}/assets/imgs/news/thumb-4.jpg" alt=""></a>
                                         </li>
                                         <li>
-                                            <a href="assets/imgs/thumbnail-4.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="assets/imgs/news/thumb-5.jpg" alt=""></a>
+                                            <a href="{{asset('static')}}/assets/imgs/thumbnail-4.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="{{asset('static')}}/assets/imgs/news/thumb-5.jpg" alt=""></a>
                                         </li>
                                         <li>
-                                            <a href="assets/imgs/thumbnail-5.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="assets/imgs/news/thumb-6.jpg" alt=""></a>
+                                            <a href="{{asset('static')}}/assets/imgs/thumbnail-5.html" class="play-video" data-animate="zoomIn" data-duration="1.5s" data-delay="0.1s"><img class="border-radius-5" src="{{asset('static')}}/assets/imgs/news/thumb-6.jpg" alt=""></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -1070,7 +1086,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-1.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1086,7 +1102,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-2.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1102,7 +1118,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-3.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1129,7 +1145,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-4.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-4.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1145,7 +1161,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-5.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-5.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1161,7 +1177,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-6.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-6.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1188,7 +1204,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-7.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-7.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1204,7 +1220,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-8.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-8.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1220,7 +1236,7 @@
                                     <div class="d-flex hover-up-2 transition-normal">
                                         <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                                             <a class="color-white" href="single.html">
-                                                <img src="assets/imgs/news/thumb-9.jpg" alt="">
+                                                <img src="{{asset('static')}}/assets/imgs/news/thumb-9.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="post-content media-body">
@@ -1245,7 +1261,7 @@
                     <div class="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a class="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-1.jpg" alt="">
+                                <img src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt="">
                             </a>
                         </div>
                         <div class="post-content media-body">
@@ -1256,7 +1272,7 @@
                     <div class="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a class="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-2.jpg" alt="">
+                                <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
                             </a>
                         </div>
                         <div class="post-content media-body">
@@ -1267,7 +1283,7 @@
                     <div class="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a class="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-3.jpg" alt="">
+                                <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
                             </a>
                         </div>
                         <div class="post-content media-body">
@@ -1278,7 +1294,7 @@
                     <div class="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a class="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-4.jpg" alt="">
+                                <img src="{{asset('static')}}/assets/imgs/news/thumb-4.jpg" alt="">
                             </a>
                         </div>
                         <div class="post-content media-body">
@@ -1376,23 +1392,23 @@
     <!-- End Footer -->
     <div class="dark-mark"></div>
     <!-- Vendor JS-->
-    <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/vendor/jquery.slicknav.js"></script>
-    <script src="assets/js/vendor/slick.min.js"></script>
-    <script src="assets/js/vendor/wow.min.js"></script>
-    <script src="assets/js/vendor/jquery.ticker.js"></script>
-    <script src="assets/js/vendor/jquery.vticker-min.js"></script>
-    <script src="assets/js/vendor/jquery.scrollUp.min.js"></script>
-    <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
-    <script src="assets/js/vendor/jquery.magnific-popup.js"></script>
-    <script src="assets/js/vendor/jquery.sticky.js"></script>
-    <script src="assets/js/vendor/perfect-scrollbar.js"></script>
-    <script src="assets/js/vendor/waypoints.min.js"></script>
-    <script src="assets/js/vendor/jquery.theia.sticky.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/popper.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/bootstrap.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.slicknav.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/slick.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/wow.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.ticker.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.vticker-min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.scrollUp.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.nice-select.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.magnific-popup.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.sticky.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/perfect-scrollbar.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/waypoints.min.js"></script>
+    <script src="{{asset('static')}}/assets/js/vendor/jquery.theia.sticky.js"></script>
     <!-- NewsBoard JS -->
-    <script src="assets/js/main.js"></script>
+    <script src="{{asset('static')}}/assets/js/main.js"></script>
 </body>
 </html>
