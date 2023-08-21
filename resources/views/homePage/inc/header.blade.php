@@ -127,11 +127,31 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="list-inline-item"><a href="http://demos.alithemes.com/html/stories/docs/"><i class="elegant-icon icon_document_alt mr-5"></i>Document</a></li>
+                        @guest
+                        <li class="list-inline-item menu-item-has-children"><a href="#">Login or Register</a>
+                            <ul class="sub-menu font-small">
+                                <li class=""><a href="{{route('login')}}">Login</a></li>
+                                <li class=""><a href="{{route('register')}}">Register</a></li>
+                            </ul>
+                        </li>
+                        @endguest
+                        @auth
+                            <li class="list-inline-item menu-item-has-children"><a href="#">{{auth()->user()->name}}</a>
+                                <ul class="sub-menu font-small">
+
+                                    <li class=""><a onclick="event.preventDefault(); document.getElementById('nav-logout').submit()" href="#">Logout</a>
+                                        <form action="{{route('logout')}}" id="nav-logout" method="post">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endauth
+
                     </ul>
                     <span class="vertical-divider mr-20 ml-20 d-none d-md-inline"></span>
                     <button class="search-icon d-none d-md-inline"><span class="mr-15 text-muted font-small"><i class="elegant-icon icon_search mr-5"></i>Search</span></button>
-                    <button class="btn btn-radius bg-primary text-white ml-15 font-small box-shadow">Buy Now</button>
+
                 </div>
             </div>
         </div>
@@ -143,13 +163,8 @@
                 <nav>
                     <!--Desktop menu-->
                     <ul class="main-menu d-none d-lg-inline font-small">
-                        <li class="menu-item-has-children">
-                            <a href="index.html"> <i class="elegant-icon icon_house_alt mr-5"></i> Home</a>
-                            <ul class="sub-menu text-muted font-small">
-                                <li><a href="index.html">Home default</a></li>
-                                <li><a href="home-2.html">Homepage 2</a></li>
-                                <li><a href="home-3.html">Homepage 3</a></li>
-                            </ul>
+                        <li class="">
+                            <a href="{{route('home')}}"> <i class="elegant-icon icon_house_alt mr-5"></i>Home Page</a>
                         </li>
                         <li> <a href="category-list.html">Travel</a> </li>
                         <li class="current-item"> <a href="category-list.html">Destinations</a> </li>
@@ -164,12 +179,7 @@
                     <!--Mobile menu-->
                     <ul id="mobile-menu" class="d-block d-lg-none text-muted">
                         <li class="menu-item-has-children">
-                            <a href="index.html">Home</a>
-                            <ul class="sub-menu text-muted font-small">
-                                <li><a href="index.html">Home default</a></li>
-                                <li><a href="home-2.html">Homepage 2</a></li>
-                                <li><a href="home-3.html">Homepage 3</a></li>
-                            </ul>
+                            <a href="{{route('home')}}">Home</a>
                         </li>
                         <li class="menu-item-has-children"><a href="#">Pages</a>
                             <ul class="sub-menu font-small">
@@ -191,14 +201,26 @@
                                 <li><a href="category-big.html">Big layout</a></li>
                             </ul>
                         </li>
-                        <li class="menu-item-has-children"><a href="#">Single post</a>
-                            <ul class="sub-menu font-small">
-                                <li><a href="single.html">Default</a></li>
-                                <li><a href="single-2.html">Big image</a></li>
-                                <li><a href="single-3.html">Left image</a></li>
-                                <li><a href="single-4.html">With sidebar</a></li>
-                            </ul>
-                        </li>
+                        @guest
+                            <li class=" menu-item-has-children"><a href="#">Login or Register</a>
+                                <ul class="sub-menu font-small">
+                                    <li class=""><a href="{{route('login')}}">Login</a></li>
+                                    <li class=""><a href="{{route('register')}}">Register</a></li>
+                                </ul>
+                            </li>
+                        @endguest
+                        @auth
+                            <li class=" menu-item-has-children"><a href="#">{{auth()->user()->name}}</a>
+                                <ul class="sub-menu font-small">
+
+                                    <li class=""><a onclick="event.preventDefault(); document.getElementById('nav-logout').submit()" href="#">Logout</a>
+                                        <form action="{{route('logout')}}" id="nav-logout" method="post">
+                                            @csrf
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endauth
                     </ul>
                 </nav>
             </div>

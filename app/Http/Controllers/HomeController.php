@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        return view('homePage.master');
+        return view('homePage.home.index');
     }
 
     public function blogs(){
