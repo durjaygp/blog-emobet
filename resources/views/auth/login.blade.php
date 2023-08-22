@@ -77,9 +77,11 @@
                             @csrf
                             <div class="form-group">
                                 <input type="text" required="" class="form-control" name="email" placeholder="Your Email">
+                                <x-input-error :messages="$errors->get('email')" class="mt-2" />
                             </div>
                             <div class="form-group">
                                 <input class="form-control" required="" type="password" name="password" placeholder="Password">
+                                <x-input-error :messages="$errors->get('password')" class="mt-2" />
                             </div>
                             <div class="login_footer form-group">
                                 <div class="chek-form">
@@ -94,14 +96,6 @@
                                 <button type="submit" class="button button-contactForm btn-block">Log in</button>
                             </div>
                         </form>
-                        <div class="divider-text-center mt-15 mb-15">
-                            <span> or</span>
-                        </div>
-                        <ul class="btn-login list_none text-center mb-15">
-                            <li><a href="#" class="btn btn-facebook"><i class="elegant-icon social_facebook  mr-5"></i>Facebook</a></li>
-                            <li><a href="#" class="btn btn-google"><i class="elegant-icon social_googleplus mr-5"></i>Google</a></li>
-                        </ul>
-                        <div class="text-muted text-center">Don't Have an Account? <a href="page-register.html">Sign up now</a></div>
                     </div>
                 </div>
             </div>

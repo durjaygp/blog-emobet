@@ -108,7 +108,7 @@
                         <div class="divider-text-center mt-15 mb-15">
                             <span> or</span>
                         </div>
-                        <div class="text-muted text-center">Already have an account? <a href="page-login.html">Sign up now</a></div>
+                        <div class="text-muted text-center">Already have an account? <a href="{{route('login')}}">Login</a></div>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ Website: https://themesbrand.com/
 Contact: themesbrand@gmail.com
 File: Main Css File
 */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Sarabun:400,600,700&amp;display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500|Sarabun:400,600,700&display=swap");
 #page-topbar {
   position: fixed;
   top: 0;

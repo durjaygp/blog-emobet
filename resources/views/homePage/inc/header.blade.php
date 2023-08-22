@@ -139,6 +139,10 @@
                             <li class="list-inline-item menu-item-has-children"><a href="#">{{auth()->user()->name}}</a>
                                 <ul class="sub-menu font-small">
 
+                                    @if(auth()->user()->role_id == 2)
+                                        <li class=""><a href="{{route('back')}}">Admin Panel</a></li>
+                                    @endif
+
                                     <li class=""><a onclick="event.preventDefault(); document.getElementById('nav-logout').submit()" href="#">Logout</a>
                                         <form action="{{route('logout')}}" id="nav-logout" method="post">
                                             @csrf

@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\AdminCommentController;
 use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\MakeAdminController;
+use App\Http\Controllers\Back\BackController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -89,7 +90,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth','isadmin')->group(func
 });
 
 
-
+Route::get('/back',[BackController::class,'index'])->name('back');
 
 
 
