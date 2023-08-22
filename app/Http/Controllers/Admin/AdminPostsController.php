@@ -49,7 +49,9 @@ class AdminPostsController extends Controller
         $validated = $request->validate($this->rules);
         $validated['user_id'] = auth()->id();
         $validated['slug'] = Str::slug($request->title,'-');
-        $post = Post::create($validated);
+        $validated['post_type'] = $request->post_type;
+        $validated['post_status'] = $request->post_status;
+        $post = Post::create($validated, );
 
         if($request->has('thumbnail'))
         {
