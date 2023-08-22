@@ -1,5 +1,7 @@
 
+
 <!doctype html>
+
 <html lang="en">
 
 <head>
@@ -7,33 +9,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{asset('backEnd')}}/assets/images/favicon-32x32.png" type="image/png" />
+    <link rel="icon" href="{{asset('panel')}}/assets/images/favicon-32x32.png" type="image/png"/>
     <!--plugins-->
-    <link href="{{asset('backEnd')}}/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
-    <link href="{{asset('backEnd')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-    <link href="{{asset('backEnd')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-    <link href="{{asset('backEnd')}}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+    <link href="{{asset('panel')}}/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
+    <link href="{{asset('panel')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+    <link href="{{asset('panel')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+    <link href="{{asset('panel')}}/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet"/>
     <!-- loader-->
-    <link href="{{asset('backEnd')}}/assets/css/pace.min.css" rel="stylesheet" />
-    <script src="{{asset('backEnd')}}/assets/js/pace.min.js"></script>
+
+    <link href="{{asset('panel')}}/assets/css/pace.min.css" rel="stylesheet"/>
+    <script src="{{asset('panel')}}/assets/js/pace.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="{{asset('backEnd')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('panel')}}/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset('panel')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="{{asset('backEnd')}}/assets/css/app.css" rel="stylesheet">
-    <link href="{{asset('backEnd')}}/assets/css/icons.css" rel="stylesheet">
-    <link href="{{asset('backEnd')}}/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css" rel="stylesheet" />
-    <link href="{{asset('backEnd')}}/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
-    <link href="{{asset('backEnd')}}/assets/plugins/select2/css/select2-bootstrap4.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('backEnd') }}/drop/css/dropify.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="{{asset('panel')}}/assets/css/app.css" rel="stylesheet">
+    <link href="{{asset('panel')}}/assets/css/icons.css" rel="stylesheet">
     <!-- Theme Style CSS -->
-    <link href="{{asset('backEnd')}}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{asset('panel')}}/assets/css/dark-theme.css"/>
+    <link rel="stylesheet" href="{{asset('panel')}}/assets/css/semi-dark.css"/>
+    <link rel="stylesheet" href="{{asset('panel')}}/assets/css/header-colors.css"/>
+        <link rel="stylesheet" href="{{ asset('backEnd') }}/drop/css/dropify.min.css">
+    <script src="{{asset('frontEnd')}}/iziToast/dist/js/iziToast.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.0/tinymce.min.js" integrity="sha512-XNYSOn0laKYg55QGFv1r3sIlQWCAyNKjCa+XXF5uliZH+8ohn327Ewr2bpEnssV9Zw3pB3pmVvPQNrnCTRZtCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href="{{asset('frontEnd')}}/iziToast/dist/css/iziToast.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('backEnd')}}/assets/css/dark-theme.css" />
-    <link rel="stylesheet" href="{{asset('backEnd')}}/assets/css/semi-dark.css" />
-    <link rel="stylesheet" href="{{asset('backEnd')}}/assets/css/header-colors.css" />
-    <script src="{{asset('frontEnd')}}/iziToast/dist/js/iziToast.min.js"></script>
+    <link rel="stylesheet" href="{{asset('panel')}}/richtexteditor/rte_theme_default.css" />
+    <script type="text/javascript" src="{{asset('panel')}}/richtexteditor/rte.js"></script>
+    <script type="text/javascript" src='{{asset('panel')}}/richtexteditor/plugins/all_plugins.js'></script>
+    <link href="{{asset('panel')}}/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
 
     <title>@yield('title')</title>
 </head>
@@ -41,14 +44,12 @@
 <body>
 <!--wrapper-->
 <div class="wrapper">
-    <!--start header -->
-    @include('admin.include.header')
-    <!--end header -->
-    <!--navigation-->
     <!--sidebar wrapper -->
     @include('admin.include.sidebar')
     <!--end sidebar wrapper -->
-    <!--end navigation-->
+    <!--start header -->
+    @include('admin.include.header')
+    <!--end header -->
     <!--start page wrapper -->
     <div class="page-wrapper">
         @yield('content')
@@ -57,38 +58,31 @@
     <!--start overlay-->
     <div class="overlay toggle-icon"></div>
     <!--end overlay-->
-    <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
+    <!--Start Back To Top Button-->
+    <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
     <!--End Back To Top Button-->
     @include('admin.include.footer')
 </div>
-<!--end wrapper-->
-<!--start switcher-->
-<!--end switcher-->
+
 <!-- Bootstrap JS -->
-<script src="{{asset('backEnd')}}/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('panel')}}/assets/js/bootstrap.bundle.min.js"></script>
 <!--plugins-->
-<script src="{{asset('backEnd')}}/assets/js/jquery.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/metismenu/js/metisMenu.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-<!--app JS-->
-<script src="{{asset('backEnd')}}/assets/js/app.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/chartjs/js/Chart.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/chartjs/js/Chart.extension.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/js/index.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/select2/js/select2.min.js"></script>
+<script src="{{asset('panel')}}/assets/js/jquery.min.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/metismenu/js/metisMenu.min.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/chartjs/js/chart.js"></script>
+<script src="{{asset('panel')}}/assets/js/index.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/select2/js/select2.min.js"></script>
 <script src="{{asset('backEnd')}}/drop/js/dropify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-
-<script src="{{asset('backEnd')}}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-<script src="{{asset('backEnd')}}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
-
-
-
+<!--app JS-->
+<script src="{{asset('panel')}}/assets/js/app.js"></script>
+<script>
+    new PerfectScrollbar(".app-container")
+</script>
 
 
 
@@ -196,5 +190,10 @@
         $('#example').DataTable();
       } );
 </script>
+<script>
+    var editor1 = new RichTextEditor("#div_editor1");
+</script>
+
 </body>
+
 </html>

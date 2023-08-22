@@ -57,8 +57,8 @@
                                     <input class="dropify" type="file" name="thumbnail" accept="image/*">
                                 </div>
                                 <div class="form-group">
-                                    <label><h6>Blog Description<span class="text-danger">*</span></h6></label>
-                                    <textarea id="post_content" name="body">{{old("body")}}</textarea>
+                                    <label><h6 style="text-decoration: underline wavy orange">Blog Description<span class="text-danger">*</span></h6></label>
+                                    <textarea id="div_editor1" name="body">{{old("body")}}</textarea>
                                 </div>
                                 <input type="submit" value="submit" class="btn btn-success px-5 radius-30">
                             </div>
