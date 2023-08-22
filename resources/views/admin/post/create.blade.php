@@ -36,18 +36,17 @@
                                     <label for="inputProductTitle" class="form-label"><h6>Blog Title<span class="text-danger">*</span></h6></label>
                                     <input type="text" name="title" value="{{old("title")}}" class="form-control" id="inputProductTitle" placeholder="Enter Blog title">
                                 </div>
-                                <div class="mb-3">
+
+                                <div class="mb-4">
                                     <label for="inputProductDescription" class="form-label"><h6>Select Category<span class="text-danger">*</span></h6></label>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <select name="category_id" value="{{old("category_id")}}" class="single-select">
-                                                @foreach($categories as $key => $category)
-                                                <option value="{{$key}}">{{$category}}</option>
-                                                @endforeach
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <select name="category_id" value="{{old("category_id")}}" class="form-select form-select-sm" id="small-bootstrap-class-single-field" data-placeholder="Choose one thing">
+                                        <option>Select Category</option>
+                                        @foreach($categories as $key => $category)
+                                            <option value="{{$key}}">{{$category}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
+
                                 <div class="mb-3">
                                     <label for="inputProductDescription" class="form-label"><h6>Short Description<span class="text-danger">*</span></h6></label>
                                     <textarea class="form-control" value="{{old("excerpt")}}" name="excerpt" id="inputProductDescription" rows="3" placeholder="Writte in 200 Words"></textarea>
@@ -56,11 +55,35 @@
                                     <label for="inputProductDescription" class="form-label"><h6>Blog Image<span class="text-danger">*</span></h6></label>
                                     <input class="dropify" type="file" name="thumbnail" accept="image/*">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group mb-4">
                                     <label><h6 style="text-decoration: underline wavy orange">Blog Description<span class="text-danger">*</span></h6></label>
                                     <textarea id="div_editor1" name="body">{{old("body")}}</textarea>
                                 </div>
-                                <input type="submit" value="submit" class="btn btn-success px-5 radius-30">
+
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <label for="inputProductDescription" class="form-label"><h6>Select Post Status<span class="text-danger">*</span></h6></label>
+
+                                        <select name="post_status" id="" class="form-select">
+                                            <option value="">Choose Status</option>
+                                            <option value="1">Active</option>
+                                            <option value="2">Draft</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="inputProductDescription" class="form-label"><h6>Select Post Type<span class="text-danger">*</span></h6></label>
+                                        <select name="post_type" id="" class="form-select">
+                                            <option value="">Post Type</option>
+                                            <option value="1">Slider Section</option>
+                                            <option value="2">Featured Section</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="m-2">
+                                    <input type="submit" value="submit" class="btn btn-success px-5 radius-30">
+                                </div>
+
                             </div>
                             </form>
                         </div>

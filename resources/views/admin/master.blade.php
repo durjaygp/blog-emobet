@@ -36,7 +36,8 @@
     <link rel="stylesheet" href="{{asset('panel')}}/richtexteditor/rte_theme_default.css" />
     <script type="text/javascript" src="{{asset('panel')}}/richtexteditor/rte.js"></script>
     <script type="text/javascript" src='{{asset('panel')}}/richtexteditor/plugins/all_plugins.js'></script>
-    <link href="{{asset('panel')}}/assets/plugins/select2/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 
     <title>@yield('title')</title>
 </head>
@@ -79,7 +80,10 @@
 <script src="{{asset('backEnd')}}/drop/js/dropify.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
 <!--app JS-->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/select2/js/select2-custom.js"></script>
 <script src="{{asset('panel')}}/assets/js/app.js"></script>
+
 <script>
     new PerfectScrollbar(".app-container")
 </script>
@@ -113,18 +117,13 @@
 
 
 <script>
-    $('.single-select').select2({
-        theme: 'bootstrap4',
-        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-        placeholder: $(this).data('placeholder'),
-        allowClear: Boolean($(this).data('allow-clear')),
-    });
-    $('.multiple-select').select2({
-        theme: 'bootstrap4',
-        width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-        placeholder: $(this).data('placeholder'),
-        allowClear: Boolean($(this).data('allow-clear')),
-    });
+
+    $( '#small-bootstrap-class-single-field' ).select2( {
+        theme: "bootstrap-5",
+        width: $( this ).data( 'width' ) ? $( this ).data( 'width' ) : $( this ).hasClass( 'w-100' ) ? '100%' : 'style',
+        placeholder: $( this ).data( 'placeholder' ),
+        dropdownParent: $( '#small-bootstrap-class-single-field' ).parent(),
+    } );
 </script>
 
 <script>
