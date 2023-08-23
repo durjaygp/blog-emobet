@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/widgets.css">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/responsive.css">
     <link href="{{asset('frontEnd')}}/iziToast/dist/css/iziToast.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>

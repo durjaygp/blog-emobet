@@ -13,9 +13,14 @@ class HomeController extends Controller
     public $blog;
     public function index(){
         $slider = Post::with('category')->where('post_status',1)->where('post_type', 1)->latest()->withCount('comments')->take(5)->get();
-        $featured = Post::with('category')->where('post_status',1)->where('post_type', 2)->latest()->withCount('comments')->take(6)->get();
+        $featured = Post::with('category')->where('post_status',1)
+            ->where('post_type', 2)->latest()->withCount('comments')->take(6)->get();
 
-        return view('homePage.home.index',compact('slider','featured'));
+        $latest = Post::with('category')->latest()->withCount('comments')->take(10)->get();
+
+        $last = Post::with('category')->orderBy('created_at', 'asc')->take(5)->get();
+
+        return view('homePage.home.index',compact('slider','featured', 'latest', 'last'));
     }
 
     public function post(Post $blog){

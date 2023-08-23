@@ -121,6 +121,13 @@ Route::prefix('admin')->name('admin.')->middleware('auth','isadmin')->group(func
     Route::post('/social/store', [SocialController::class, 'store'])->name('social.store');
     Route::post('/social/update', [SocialController::class, 'update'])->name('social.update');
 
+    Route::get('/page/show', [PageController::class, 'show'])->name('page.show');
+    Route::get('/page/create', [PageController::class, 'index'])->name('page.create');
+    Route::get('/page/edit/{id}', [PageController::class, 'edit'])->name('page.edit');
+    Route::get('/page/delete/{id}', [PageController::class, 'delete'])->name('page.delete');
+    Route::post('/page/store', [PageController::class, 'store'])->name('page.store');
+    Route::post('/page/update', [PageController::class, 'update'])->name('page.update');
+
 
 
 

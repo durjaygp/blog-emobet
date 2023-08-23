@@ -46,4 +46,5 @@ class SocialController extends Controller
         $this->social->delete();
         return redirect()->back()->with('success', 'Deleted Successfully');
     }
+
 }

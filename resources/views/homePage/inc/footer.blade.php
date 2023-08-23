@@ -8,16 +8,15 @@
                     </div>
                     <div class="textwidget">
                         <p>
-                            Start writing, no matter what. The water does not flow until the faucet is turned on.
+                            {{$website->description}}
                         </p>
-                        <p><strong class="color-black">Address</strong><br>
-                            123 Main Street<br>
-                            New York, NY 10001</p>
+
                         <p><strong class="color-black">Follow me</strong><br>
                         <ul class="header-social-network d-inline-block list-inline color-white mb-20">
-                            <li class="list-inline-item"><a class="fb" href="#" target="_blank" title="Facebook"><i class="elegant-icon social_facebook"></i></a></li>
-                            <li class="list-inline-item"><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                            <li class="list-inline-item"><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
+                            @foreach($socials as $row)
+                            <li class="list-inline-item"><a class="pt" href="{{$row->social_link}}" target="_blank" title="Facebook"><i class="{{$row->social_icon}}"></i></a></li>
+                            @endforeach
+
                         </ul>
                     </div>
                 </div>
@@ -28,12 +27,9 @@
                         <h5 class="mt-5 mb-30">Quick link</h5>
                     </div>
                     <ul class="font-small">
-                        <li class="cat-item cat-item-2"><a href="#">About me</a></li>
-                        <li class="cat-item cat-item-4"><a href="#">Help & Support</a></li>
-                        <li class="cat-item cat-item-5"><a href="#">​​Licensing Policy</a></li>
-                        <li class="cat-item cat-item-6"><a href="#">Refund Policy</a></li>
-                        <li class="cat-item cat-item-7"><a href="#">Hire me</a></li>
-                        <li class="cat-item cat-item-7"><a href="#">Contact</a></li>
+                        @foreach($pages as $row)
+                        <li class="cat-item cat-item-2"><a href="#">{{$row->page_title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -60,19 +56,29 @@
                     </div>
                     <div class="newsletter">
                         <p class="font-medium">Subscribe to our newsletter and get our newest updates right on your inbox.</p>
-                        <form class="input-group form-subcriber mt-30 d-flex">
-                            <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
-                            <button class="btn bg-primary text-white" type="submit">Subscribe</button>
-                            <label class="mt-20"> <input class="mr-5" name="name" type="checkbox" value="1" required=""> I agree to the <a href="#" target="_blank">terms &amp; conditions</a> </label>
+                        <form action="{{route('add.subscribe')}}" method="post" class="form-group">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="name" placeholder="Full Name">
+                                </div>
+                                <div class="col-md-12 mt-2 mb-2">
+                                    <input type="email" class="form-control" name="email" placeholder="Enter your E-mail address">
+                                </div>
+                                <div class="col-md-12 mt-5">
+                                    <button type="submit" class="btn btn-primary btn-block text-center align-content-center">Subscribe</button>
+                                </div>
+
+                            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-copy-right pt-30 mt-20 wow fadeInUp animated">
-            <p class="float-md-left font-small text-muted">© 2020, Stories - Personal Blog HTML Template </p>
+            <p class="float-md-left font-small text-muted">{{$website->footer}}</p>
             <p class="float-md-right font-small text-muted">
-                Design by <a href="https://alithemes.com/" target="_blank">AliThemes</a> | All rights reserved
+                {{$website->author}}
             </p>
         </div>
     </div>

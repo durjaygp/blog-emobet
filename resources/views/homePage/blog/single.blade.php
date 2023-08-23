@@ -16,7 +16,7 @@
                     <div class="col-md-6 align-self-center">
                         <div class="post-content">
                             <div class="entry-meta meta-0 mb-15 font-small">
-                                <a href="category.html"><span class="post-cat position-relative text-info">{{$post->category->name}}</span></a>
+                                <a href="{{route('home.category', $post->category->slug)}}"><span class="post-cat position-relative text-info">{{$post->category->name}}</span></a>
                             </div>
                             <h1 class="entry-title mb-30 font-weight-900">
                                 {{$post->title}}

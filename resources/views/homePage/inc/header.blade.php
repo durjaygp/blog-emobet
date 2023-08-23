@@ -9,7 +9,7 @@
             <div class="widget_nav_menu">
                 <ul>
                     @foreach($allcategory as $cat)
-                    <li class="cat-item cat-item-2"><a href="{{route('home.category', $cat)}}">{{$cat->name}}</a></li>
+                        <li class="cat-item cat-item-2"><a href="{{route('home.category', $cat)}}">{{$cat->name}}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -89,40 +89,15 @@
         <div class="container">
             <div class="row pt-20 pb-20">
                 <div class="col-md-3 col-xs-6">
-                    <a href="index.html"><img class="logo" src="{{asset('static')}}/assets/imgs/theme/logo.png" alt=""></a>
+                    <a href="{{route('home')}}"><img class="logo" src="{{asset($website->website_logo)}}" alt=""></a>
                 </div>
                 <div class="col-md-9 col-xs-6 text-right header-top-right ">
                     <ul class="list-inline nav-topbar d-none d-md-inline">
-                        <li class="list-inline-item menu-item-has-children"><a href="#">Layouts</a>
+                        <li class="list-inline-item menu-item-has-children"><a href="#">Pages</a>
                             <ul class="sub-menu font-small">
-                                <li class="menu-item-has-children"><a href="#">Pages</a>
-                                    <ul class="sub-menu font-small">
-                                        <li><a href="page-about.html">About</a></li>
-                                        <li><a href="page-contact.html">Contact</a></li>
-                                        <li><a href="page-typography.html">Typography</a></li>
-                                        <li><a href="page-register.html">Register</a></li>
-                                        <li><a href="page-login.html">Login</a></li>
-                                        <li><a href="page-search.html">Search</a></li>
-                                        <li><a href="page-author.html">Author</a></li>
-                                        <li><a href="page-404.html">404 page</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">Category</a>
-                                    <ul class="sub-menu font-small">
-                                        <li><a href="category-list.html">List layout</a></li>
-                                        <li><a href="category-grid.html">Grid layout</a></li>
-                                        <li><a href="category-masonry.html">Masonry layout</a></li>
-                                        <li><a href="category-big.html">Big layout</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">Single post</a>
-                                    <ul class="sub-menu font-small">
-                                        <li><a href="single.html">Default</a></li>
-                                        <li><a href="single-2.html">Big image</a></li>
-                                        <li><a href="single-3.html">Left image</a></li>
-                                        <li><a href="single-4.html">With sidebar</a></li>
-                                    </ul>
-                                </li>
+                                @foreach($pages as $row)
+                                <li class=""><a href="#">{{$row->page_title}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
                         @guest
@@ -180,22 +155,16 @@
                         </li>
                         <li class="menu-item-has-children"><a href="#">Pages</a>
                             <ul class="sub-menu font-small">
-                                <li><a href="page-about.html">About</a></li>
-                                <li><a href="page-contact.html">Contact</a></li>
-                                <li><a href="page-typography.html">Typography</a></li>
-                                <li><a href="page-register.html">Register</a></li>
-                                <li><a href="page-login.html">Login</a></li>
-                                <li><a href="page-search.html">Search</a></li>
-                                <li><a href="page-author.html">Author</a></li>
-                                <li><a href="page-404.html">404 page</a></li>
+                                @foreach($pages as $row)
+                                    <li class=""><a href="#">{{$row->page_title}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
                         <li class="menu-item-has-children"><a href="#">Category</a>
                             <ul class="sub-menu font-small">
-                                <li><a href="category-list.html">List layout</a></li>
-                                <li><a href="category-grid.html">Grid layout</a></li>
-                                <li><a href="category-masonry.html">Masonry layout</a></li>
-                                <li><a href="category-big.html">Big layout</a></li>
+                                @foreach($allcategory as $cat)
+                                    <li class=""><a href="{{route('home.category', $cat)}}">{{$cat->name}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
                         @guest
@@ -255,62 +224,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="row mt-80 text-center">
-                <div class="col-12 font-small suggested-area">
-                    <h5 class="suggested font-heading mb-20 text-muted"> <strong>Suggested keywords:</strong></h5>
-                    <ul class="list-inline d-inline-block">
-                        <li class="list-inline-item"><a href="category.html">World</a></li>
-                        <li class="list-inline-item"><a href="category.html">American</a></li>
-                        <li class="list-inline-item"><a href="category.html">Opinion</a></li>
-                        <li class="list-inline-item"><a href="category.html">Tech</a></li>
-                        <li class="list-inline-item"><a href="category.html">Science</a></li>
-                        <li class="list-inline-item"><a href="category.html">Books</a></li>
-                        <li class="list-inline-item"><a href="category.html">Travel</a></li>
-                        <li class="list-inline-item"><a href="category.html">Business</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row mt-80">
-                <div class="col-lg-4">
-                    <div class="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
-                        <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                            <a class="color-white" href="single.html">
-                                <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="post-content media-body">
-                            <h6> <a href="category.html">Travel Tips</a> </h6>
-                            <p class="text-muted font-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
-                        <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                            <a class="color-white" href="single.html">
-                                <img src="{{asset('static')}}/assets/imgs/news/thumb-4.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="post-content media-body">
-                            <h6> <a href="category.html">Lifestyle</a> </h6>
-                            <p class="text-muted font-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4  col-md-6">
-                    <div class="d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5 mb-30">
-                        <div class="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                            <a class="color-white" href="single.html">
-                                <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="post-content media-body">
-                            <h6> <a href="category.html">Hotel Review</a> </h6>
-                            <p class="text-muted font-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

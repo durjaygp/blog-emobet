@@ -50,6 +50,24 @@
 
             </ul>
         </li>
+
+        <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bx-file'></i>
+                </div>
+                <div class="menu-title">Page</div>
+            </a>
+
+            <ul>
+                <li> <a href="{{route('admin.page.show')}}"><i class="bx bx-right-arrow-alt"></i>All Pages</a>
+                </li>
+                <li>
+                    <a href="{{route('admin.page.create')}}"><i class="bx bx-right-arrow-alt"></i>Add Page</a>
+                </li>
+
+            </ul>
+        </li>
+
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class='bx bxl-facebook'></i>
