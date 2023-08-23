@@ -51,9 +51,31 @@
             </ul>
         </li>
         <li>
+            <a href="javascript:;" class="has-arrow">
+                <div class="parent-icon"><i class='bx bxl-facebook'></i>
+                </div>
+                <div class="menu-title">Social Media</div>
+            </a>
+
+            <ul>
+                <li> <a href="{{route('admin.social.show')}}"><i class="bx bx-right-arrow-alt"></i>All Links</a>
+                </li>
+                <li>
+                    <a href="{{route('admin.social.create')}}"><i class="bx bx-right-arrow-alt"></i>Add Links</a>
+                </li>
+
+            </ul>
+        </li>
+        <li>
             <a href="{{route('admin.comments.show')}}">
                 <div class="parent-icon"><i class='bx bx-comment-detail'></i></div>
                 <div class="menu-title">Comments</div>
+            </a>
+        </li>
+        <li>
+            <a href="{{route('admin.subscriber')}}">
+                <div class="parent-icon"><i class='lni lni-users'></i></div>
+                <div class="menu-title">Subscriber</div>
             </a>
         </li>
         <li>
@@ -75,7 +97,13 @@
             </a>
         </li>
         <li>
-            <a href="{{route('blog')}}" target="_blank">
+            <a href="{{route('admin.admin.setting')}}">
+                <div class="parent-icon"><i class='bx bx-reset'></i></div>
+                <div class="menu-title">Website Information</div>
+            </a>
+        </li>
+        <li>
+            <a href="{{route('home')}}" target="_blank">
                 <div class="parent-icon"><i class='bx bxs-mouse-alt'></i>
                 </div>
                 <div class="menu-title">Browse FrontEnd</div>

@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function showBlog(Post $blog){
 
-        $blog = Post::withCount('comments')->find($blog->id);
+        $blog = Post::with('author')->withCount('comments')->find($blog->id);
 
         $recent_posts = Post::latest()->withCount('comments')->take(5)->get();
 

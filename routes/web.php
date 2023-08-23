@@ -15,6 +15,12 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminSettingController;
 use App\Http\Controllers\Admin\MakeAdminController;
 use App\Http\Controllers\Back\BackController;
+use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\SocialShareButtonsController;
+use App\Http\Controllers\SocialController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\AdsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,6 +29,11 @@ use App\Http\Controllers\Back\BackController;
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/sing/{blog:slug}',[HomeController::class, 'post'])->name('post.single');
+Route::get('/cate/{category:slug}', [HomeController::class, 'category'])->name('home.category');
+
+Route::post('/subscribe',[SubscribeController::class, 'store'])->name('add.subscribe');
+
+
 
 Route::get('/arbitrage-calculator',[HomeController::class, 'arc'])->name('home.arc');
 Route::get('/arbitrage-guide',[HomeController::class, 'arcguide'])->name('home.arcguide');
@@ -37,6 +48,7 @@ Route::get('/blogs',[HomeController::class, 'blogs'])->name('blog');
 Route::get('/blog/{blog:slug}',[PostController::class, 'showBlog'])->name('blog.show');
 
 Route::post('/comment-submit/{post}',[PostController::class, 'addComment'])->name('add.comment');
+
 Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 Route::get('/tag/{tag:name}', [TagController::class, 'show'])->name('tags.show');
 
@@ -53,6 +65,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth','isadmin')->group(func
     Route::get('/',[DashboardController::class, 'index'])->name('index');
 
     Route::resource('/posts', AdminPostsController::class);
+
     Route::get('/category/show', [AdminCategoryController::class, 'index'])->name('category.show');
     Route::get('/category/create', [AdminCategoryController::class, 'create'])->name('category.create');
     Route::get('/category/edit/{id}', [AdminCategoryController::class, 'edit'])->name('category.edit');
@@ -82,12 +95,34 @@ Route::prefix('admin')->name('admin.')->middleware('auth','isadmin')->group(func
     Route::post('/user/show/update/{id}',[AdminSettingController::class, 'update'])->name('user.editupdate');
 
     Route::get('/admin/show',[MakeAdminController::class,'index'])->name('admin.show');
+
     Route::get('/admin/show/edit/{id}',[MakeAdminController::class,'edit'])->name('admin.edit');
     Route::post('/admin/show/update',[MakeAdminController::class,'update'])->name('admin.update');
 
     Route::get('/admin/show/create',[MakeAdminController::class,'create'])->name('admin.create');
     Route::get('/admin/show/delete/{id}',[MakeAdminController::class,'delete'])->name('admin.delete');
     Route::post('/admin/show/store',[MakeAdminController::class,'store'])->name('admin.store');
+
+    //subscriber
+    Route::get('/admin/subscriber/show',[SubscribeController::class, 'index'])->name('subscriber');
+    Route::get('/admin/subscriber/delete/{id}',[SubscribeController::class, 'destroy'])->name('subscriber.delete');
+
+    Route::get('admin/website/settings/', [SettingController::class, 'index'])->name('admin.setting');
+    Route::post('admin/website/settings/update', [SettingController::class, 'updateSetting'])->name('update.setting');
+
+    Route::get('/social-media-share', [SocialShareButtonsController::class,'ShareWidget']);
+
+
+
+    Route::get('/social/show', [SocialController::class, 'index'])->name('social.show');
+    Route::get('/social/create', [SocialController::class, 'create'])->name('social.create');
+    Route::get('/social/edit/{id}', [SocialController::class, 'edit'])->name('social.edit');
+    Route::get('/social/delete/{id}', [SocialController::class, 'delete'])->name('social.delete');
+    Route::post('/social/store', [SocialController::class, 'store'])->name('social.store');
+    Route::post('/social/update', [SocialController::class, 'update'])->name('social.update');
+
+
+
 
 
 

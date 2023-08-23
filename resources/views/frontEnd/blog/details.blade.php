@@ -101,7 +101,7 @@
                     <h3 class="font-weight-bold mb-4">{{ count($post->comments) }} Comments</h3>
                     @foreach($post->comments as $comment)
                     <div class="media mb-4">
-                        <img src="{{asset('backEnd')}}/assets/person.jpg" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+                        <img src="{{asset($comment->user->user_image)}}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
                         <div class="media-body">
                             <h6>{{$comment->user->name}}<small><i>{{ $comment->created_at->diffForHumans() }}</i></small></h6>
                             <p>{{ $comment->the_comment }}</p>

@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="{{$website->author}}"/>
+    <meta name="description" content="{{$website->description}}" />
+    <meta name="keywords" content="{{$website->keywords}}" />
+    <meta name="tags" content="{{$website->tags}}" />
+    <meta name="url" content="{{$website->url}}" />
+    <meta name="google-site-verification" content="{{$website->google}}">
     <title>@yield('title')</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('static')}}/assets/imgs/theme/logo.png">
-    <!-- NewsBoard CSS  -->
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/style.css">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/widgets.css">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/responsive.css">
+    <link href="{{asset('frontEnd')}}/iziToast/dist/css/iziToast.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,5 +49,30 @@
     <script src="{{asset('static')}}/assets/js/vendor/jquery.theia.sticky.js"></script>
     <!-- NewsBoard JS -->
     <script src="{{asset('static')}}/assets/js/main.js"></script>
+    <script src="{{asset('frontEnd')}}/iziToast/dist/js/iziToast.min.js"></script>
+
+
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            <script>
+                iziToast.error({
+                    title: '',
+                    position:'topRight',
+                    message: '{{$error}}',
+                });
+            </script>
+        @endforeach
+    @endif
+
+    @if(session()->get('success'))
+        <script>
+            iziToast.success({
+                title: '',
+                position:'topRight',
+                message: '{{session()->get('success')}}',
+            });
+        </script>
+    @endif
+
 </body>
 </html>

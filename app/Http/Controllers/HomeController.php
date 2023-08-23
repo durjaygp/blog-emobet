@@ -21,12 +21,22 @@ class HomeController extends Controller
     public function post(Post $blog){
         $blog = Post::withCount('comments')->find($blog->id);
 
-        $recent_posts = Post::latest()->withCount('comments')->take(5)->get();
+        $recent_posts = Post::latest()->withCount('comments')->take(3)->get();
 
         $categories = Category::latest()->withCount('posts')->orderBy('posts_count', 'desc')->take(10)->get();
 
         $tags = Tag::latest()->take(15)->get();
         $person = Admin::find(1);
+
+        $shareComponent = \Share::page(
+            route('post.single',$blog->slug)
+        )
+            ->facebook(route('post.single',$blog->slug))
+            ->twitter(route('post.single',$blog->slug))
+            ->linkedin(route('post.single',$blog->slug))
+            ->telegram(route('post.single',$blog->slug))
+            ->whatsapp(route('post.single',$blog->slug))
+            ->reddit(route('post.single',$blog->slug));
 
         return view('homePage.blog.single',[
             'post' => $blog,
@@ -34,9 +44,11 @@ class HomeController extends Controller
             'cates' => $categories,
             'tags' => $tags,
             'person'=>$person,
+            'shareComponent'=>$shareComponent
         ]);
 
     }
+
 
 
 
@@ -56,6 +68,24 @@ class HomeController extends Controller
             'tags' => $tags,
         ]);
     }
+
+    public function category(Category $category)
+    {
+        //$blogs = Post::latest()->withCount('comments')->paginate(10);
+        $recent_posts = Post::latest()->take(5)->get();
+        $cates = Category::withCount('posts')->orderBy('posts_count', 'desc')->take(10)->get();
+        $tags = Tag::latest()->take(50)->get();
+
+        return view('homePage.category.category', [
+            'category' => $category,
+            'blogs' => $category->posts()->withCount('comments')->paginate(12),
+            'recent_posts' => $recent_posts,
+            //'blogs'=>$blogs,
+            'cates' => $cates,
+            'tags' => $tags
+        ]);
+    }
+
 
     public function arc(){
         return view('frontEnd.pages.arc');

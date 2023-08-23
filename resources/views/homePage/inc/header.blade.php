@@ -8,11 +8,9 @@
             </div>
             <div class="widget_nav_menu">
                 <ul>
-                    <li class="cat-item cat-item-2"><a href="category.html">Travel tips</a> <span class="post-count">30</span></li>
-                    <li class="cat-item cat-item-3"><a href="category-grid.html">Book review</a> <span class="post-count">25</span></li>
-                    <li class="cat-item cat-item-4"><a href="category-list.html">Hotel review</a> <span class="post-count">16</span></li>
-                    <li class="cat-item cat-item-5"><a href="category-masonry.html">Destinations </a> <span class="post-count">22</span></li>
-                    <li class="cat-item cat-item-6"><a href="category-big.html">Lifestyle</a> <span class="post-count">25</span></li>
+                    @foreach($allcategory as $cat)
+                    <li class="cat-item cat-item-2"><a href="{{route('home.category', $cat)}}">{{$cat->name}}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -170,15 +168,10 @@
                         <li class="">
                             <a href="{{route('home')}}"> <i class="elegant-icon icon_house_alt mr-5"></i>Home Page</a>
                         </li>
-                        <li> <a href="category-list.html">Travel</a> </li>
-                        <li class="current-item"> <a href="category-list.html">Destinations</a> </li>
-                        <li> <a href="category-grid.html">Guides</a> </li>
-                        <li> <a href="category-masonry.html">Food</a> </li>
-                        <li> <a href="category-big.html">Hotels</a> </li>
-                        <li> <a href="category.html">Review</a> </li>
-                        <li> <a href="category.html">Healthy </a> </li>
-                        <li> <a href="category.html">Lifestyle</a> </li>
-                        <li> <a href="category.html">Blog</a> </li>
+                        @foreach($categories as $cat)
+                        <li class=""> <a href="{{route('home.category', $cat)}}">
+                                {{$cat->name}}</a> </li>
+                        @endforeach
                     </ul>
                     <!--Mobile menu-->
                     <ul id="mobile-menu" class="d-block d-lg-none text-muted">

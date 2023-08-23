@@ -1,6 +1,6 @@
 @extends('homePage.master')
 @section('title')
-    Home Page
+{{$website->name}}
 @endsection
 @section('content')
     <main  class="bg-grey pb-30">
@@ -21,7 +21,7 @@
                                             <a class="text-white" href="{{route('post.single', $row)}}" tabindex="0">{{$row->title}}</a>
                                         </h1>
                                         <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                            <span class="post-on">{{$row->created_at}}</span>
+                                            <span class="post-on">{{ $row->created_at->format('d M Y') }}</span>
                                             <span class="post-on">{{$row->comments_count}} Comments</span>
                                         </div>
                                     </div>
