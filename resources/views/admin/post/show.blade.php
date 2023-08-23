@@ -32,6 +32,8 @@
                                 <th>Image</th>
                                 <th>Category</th>
                                 <th>Description</th>
+                                <th>Post Status</th>
+                                <th>Post Type</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -39,10 +41,12 @@
                             @foreach($blogs as $blog)
                             <tr>
                                 <td>{{$loop->iteration}}</td>
-                                <td>{{$blog->title}}</td>
-                                <td><img src="@if(!empty($blog->image)){{asset($blog->image->path)}}@endif" class="img-fluid w-50" alt=""></td>
+                                <td>{{Str::limit($blog->title,20)}}</td>
+                                <td><img src="@if(!empty($blog->post_image)){{asset($blog->post_image)}}@endif" class="img-fluid w-50" alt=""></td>
                                 <td>{{$blog->category->name}}</td>
                                 <td>{!!Str::limit($blog->body, 15 )!!}</td>
+                                <td>@php if( $blog->post_status == 1){echo 'Active';}else{echo 'Draft';} @endphp</td>
+                                <td>@php if( $blog->post_type == 1){echo 'Slider';}else{echo 'Featured Section';} @endphp</td>
                                 <td>
                                     <div class="d-flex order-actions">
                                         <a href="{{route('admin.posts.edit',['post'=>$blog->id])}}" class=""><i class='bx bxs-edit'></i></a>
@@ -58,7 +62,7 @@
                     </table>
                 </div>
             </div>
-        </div>                      
+        </div>
 
 
 

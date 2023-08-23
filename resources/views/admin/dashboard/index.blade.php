@@ -85,7 +85,7 @@
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$blog->title}}</td>
-                            <td><img src="@if(!empty($blog->image)){{asset($blog->image->path)}}@endif" class="img-fluid" width="200px" height="200px"></td>
+                            <td><img src="@if(!empty($blog->post_image)){{asset($blog->post_image)}}@endif" class="img-fluid" width="200px" height="200px"></td>
                             <td>{{$blog->category->name}}</td>
                             <td>{!!Str::limit($blog->body, 15 )!!}</td>
                             <td>

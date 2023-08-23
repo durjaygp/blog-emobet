@@ -22,6 +22,8 @@ use App\Http\Controllers\Back\BackController;
 */
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/sing/{blog:slug}',[HomeController::class, 'post'])->name('post.single');
+
 Route::get('/arbitrage-calculator',[HomeController::class, 'arc'])->name('home.arc');
 Route::get('/arbitrage-guide',[HomeController::class, 'arcguide'])->name('home.arcguide');
 Route::get('/arbitrage-opportunities',[HomeController::class, 'oop'])->name('home.oop');
@@ -31,7 +33,9 @@ Route::get('/faq',[HomeController::class, 'faq'])->name('home.faq');
 
 
 Route::get('/blogs',[HomeController::class, 'blogs'])->name('blog');
+
 Route::get('/blog/{blog:slug}',[PostController::class, 'showBlog'])->name('blog.show');
+
 Route::post('/comment-submit/{post}',[PostController::class, 'addComment'])->name('add.comment');
 Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 Route::get('/tag/{tag:name}', [TagController::class, 'show'])->name('tags.show');
@@ -88,9 +92,6 @@ Route::prefix('admin')->name('admin.')->middleware('auth','isadmin')->group(func
 
 
 });
-
-
-Route::get('/back',[BackController::class,'index'])->name('back');
 
 
 

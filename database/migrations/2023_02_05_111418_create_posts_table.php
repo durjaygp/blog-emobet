@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('excerpt');
-            $table->text('body');
+            $table->longText('body');
+            $table->text('post_image');
 
             $table->foreignId('user_id');
             $table->foreignId('category_id');

@@ -8,89 +8,28 @@
             <div class="featured-slider-3 position-relative">
                 <div class="slider-3-arrow-cover"></div>
                 <div class="featured-slider-3-items">
+                    @foreach($slider as $row)
                     <div class="slider-single overflow-hidden border-radius-10">
                         <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-16.jpg)">
+                            <div class="thumb-overlay position-relative" style="background-image: url({{asset($row->post_image)}})">
                                 <div class="post-content-overlay">
                                     <div class="container">
                                         <div class="entry-meta meta-0 font-small mb-20">
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-info text-uppercase">Travel</span></a>
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-warning text-uppercase">Animal</span></a>
+                                            <a href="category.html" tabindex="0"><span class="post-cat text-info text-uppercase">{{$row->category->name}}</span></a>
                                         </div>
                                         <h1 class="post-title mb-20 font-weight-900 text-white">
-                                            <a class="text-white" href="single.html" tabindex="0">How to Visit Bali's Monkey Forest</a>
+                                            <a class="text-white" href="{{route('post.single', $row)}}" tabindex="0">{{$row->title}}</a>
                                         </h1>
                                         <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                            <span class="post-on">26 August 2020</span>
-                                            <span class="hit-count has-dot">18k Views</span>
+                                            <span class="post-on">{{$row->created_at}}</span>
+                                            <span class="post-on">{{$row->comments_count}} Comments</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="slider-single overflow-hidden border-radius-10">
-                        <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-17.jpg)">
-                                <div class="post-content-overlay">
-                                    <div class="container">
-                                        <div class="entry-meta meta-0 font-small mb-20">
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-info text-uppercase">Lifestyle</span></a>
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-warning text-uppercase">Destinations</span></a>
-                                        </div>
-                                        <h1 class="post-title mb-20 font-weight-900 text-white">
-                                            <a class="text-white" href="single.html" tabindex="0">Abstract Australia from Above</a>
-                                        </h1>
-                                        <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                            <span class="post-on">15 September 2020</span>
-                                            <span class="hit-count has-dot">23k Views</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-single overflow-hidden border-radius-10">
-                        <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-18.jpg)">
-                                <div class="post-content-overlay">
-                                    <div class="container">
-                                        <div class="entry-meta meta-0 font-small mb-20">
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-warning text-uppercase">Travel Tips</span></a>
-                                        </div>
-                                        <h1 class="post-title mb-20 font-weight-900 text-white">
-                                            <a class="text-white" href="single.html" tabindex="0">Tips for Scuba Diving the Great Barrier Reef</a>
-                                        </h1>
-                                        <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                            <span class="post-on">15 September 2020</span>
-                                            <span class="hit-count has-dot">17k Views</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-single overflow-hidden border-radius-10">
-                        <div class="post-thumb position-relative">
-                            <div class="thumb-overlay position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-19.jpg)">
-                                <div class="post-content-overlay">
-                                    <div class="container">
-                                        <div class="entry-meta meta-0 font-small mb-20">
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-info text-uppercase">Hotel</span></a>
-                                            <a href="category.html" tabindex="0"><span class="post-cat text-warning text-uppercase">Healthy</span></a>
-                                        </div>
-                                        <h1 class="post-title mb-20 font-weight-900 text-white">
-                                            <a class="text-white" href="single.html" tabindex="0">Staying at the Hilton Seychelles Northolme Resort & Spa</a>
-                                        </h1>
-                                        <div class="entry-meta meta-1 font-small text-white mt-10 pr-5 pl-5">
-                                            <span class="post-on">22 September 2020</span>
-                                            <span class="hit-count has-dot">16k Views</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -116,6 +55,7 @@
             </div>
             <div class="loop-grid mb-30">
                 <div class="row">
+                    @foreach($featured as $row)
                     <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
                         <div class="post-card-1 border-radius-10 hover-up">
                             <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-1.jpg)">
@@ -146,151 +86,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-1.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <span class="top-right-icon bg-success"><i class="elegant-icon icon_camera_alt"></i></span>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-info">Travel</span></a>
-                                    <a href="category.html"><span class="post-cat text-success">Food</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Want fluffy Japanese pancakes but can’t fly to Tokyo?</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">27 August</span>
-                                        <span class="time-reading has-dot">12 mins read</span>
-                                        <span class="post-by has-dot">23k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-1.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <span class="top-right-icon bg-success"><i class="elegant-icon icon_camera_alt"></i></span>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-info">Travel</span></a>
-                                    <a href="category.html"><span class="post-cat text-success">Food</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Want fluffy Japanese pancakes but can’t fly to Tokyo?</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">27 August</span>
-                                        <span class="time-reading has-dot">12 mins read</span>
-                                        <span class="post-by has-dot">23k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-7.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-warning">Fashion</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Put Yourself in Your Customers Shoes</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">17 July</span>
-                                        <span class="time-reading has-dot">8 mins read</span>
-                                        <span class="post-by has-dot">12k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.2s">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-9.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-danger">Travel</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">Life and Death in the Empire of the Tiger</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">7 August</span>
-                                        <span class="time-reading has-dot">15 mins read</span>
-                                        <span class="post-by has-dot">500 views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="col-lg-4 col-md-6 mb-30 wow fadeInUp animated" data-wow-delay="0.4s">
-                        <div class="post-card-1 border-radius-10 hover-up">
-                            <div class="post-thumb thumb-overlay img-hover-slide position-relative" style="background-image: url({{asset('static')}}/assets/imgs/news/news-11.jpg)">
-                                <a class="img-link" href="single.html"></a>
-                                <span class="top-right-icon bg-info"><i class="elegant-icon icon_headphones"></i></span>
-                                <ul class="social-share">
-                                    <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                    <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                    <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                    <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="post-content p-30">
-                                <div class="entry-meta meta-0 font-small mb-10">
-                                    <a href="category.html"><span class="post-cat text-success">Lifestyle</span></a>
-                                </div>
-                                <div class="d-flex post-card-content">
-                                    <h5 class="post-title mb-20 font-weight-900">
-                                        <a href="single.html">When Two Wheels Are Better Than Four</a>
-                                    </h5>
-                                    <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                        <span class="post-on">15 Jun</span>
-                                        <span class="time-reading has-dot">9 mins read</span>
-                                        <span class="post-by has-dot">1.2k views</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    @endforeach
                 </div>
             </div>
         </div>

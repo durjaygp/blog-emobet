@@ -49,15 +49,15 @@
 
                                 <div class="mb-3">
                                     <label for="inputProductDescription" class="form-label"><h6>Short Description<span class="text-danger">*</span></h6></label>
-                                    <textarea class="form-control" value="{{old("excerpt")}}" name="excerpt" id="inputProductDescription" rows="3" placeholder="Writte in 200 Words"></textarea>
+                                    <textarea class="form-control" value="{{old("excerpt")}}" name="excerpt" id="inputProductDescription" rows="3" placeholder="Write in 200 Words"></textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label for="inputProductDescription" class="form-label"><h6>Blog Image<span class="text-danger">*</span></h6></label>
-                                    <input class="dropify" type="file" name="thumbnail" accept="image/*">
+                                    <input class="dropify" type="file" name="post_image" accept="image/*">
                                 </div>
                                 <div class="form-group mb-4">
                                     <label><h6 style="text-decoration: underline wavy orange">Blog Description<span class="text-danger">*</span></h6></label>
-                                    <textarea id="div_editor1" name="body">{{old("body")}}</textarea>
+                                    <textarea name="body" id="div_editor1" name="body">{{old("body")}}</textarea>
                                 </div>
 
                                 <div class="row">

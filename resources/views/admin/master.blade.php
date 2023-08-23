@@ -38,7 +38,7 @@
     <script type="text/javascript" src='{{asset('panel')}}/richtexteditor/plugins/all_plugins.js'></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
-
+    <link href="{{asset('panel')}}/assets/plugins/datatable/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
     <title>@yield('title')</title>
 </head>
 
@@ -83,6 +83,8 @@
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="{{asset('panel')}}/assets/plugins/select2/js/select2-custom.js"></script>
 <script src="{{asset('panel')}}/assets/js/app.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+<script src="{{asset('panel')}}/assets/plugins/datatable/js/dataTables.bootstrap5.min.js"></script>
 
 <script>
     new PerfectScrollbar(".app-container")

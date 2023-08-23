@@ -44,36 +44,40 @@ class AdminPostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public $blog;
     public function store(Request $request)
     {
-        $validated = $request->validate($this->rules);
-        $validated['user_id'] = auth()->id();
-        $validated['slug'] = Str::slug($request->title,'-');
-        $validated['post_type'] = $request->post_type;
-        $validated['post_status'] = $request->post_status;
-        $post = Post::create($validated, );
+        $request->validate([
+            'title'=>'required|unique:posts',
+            'excerpt'=>'required',
+            'body'=>'required',
+            'post_image'=>'required',
+            'category_id'=>'required',
+        ]);
 
-        if($request->has('thumbnail'))
-        {
-            $thumbnail = $request->file('thumbnail');
+       $this->blog = new Post();
+       $this->blog->title = $request->title;
+       $this->blog->slug = Str::slug($request->title,'-');
+       $this->blog->excerpt = $request->excerpt;
+       $this->blog->body = $request->body;
+       $this->blog->post_image = $this->saveImage($request);
+       $this->blog->user_id = auth()->id();
+       $this->blog->category_id = $request->category_id;
+       $this->blog->post_status = $request->post_status;
+       $this->blog->post_type = $request->post_type;
+       $this->blog->save();
+       return redirect()->back()->with('success', 'Blog Created Successfully');
+    }
 
-            $file_extension = $thumbnail->getClientOriginalExtension();
-            // $path = $thumbnail->store('/uploads/images', 'public');
-            $filename = time().'.'.$file_extension;
-            $destiantion = "uploads/images";
-            $path = $thumbnail->move($destiantion,$filename);
-
-
-            $post->image()->create([
-                'name' => $filename,
-                'extension' => $file_extension,
-                'path' => $path
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Blog Created Successfully');
-
-
+    public $image, $imageName, $imageUrl, $directory;
+    public function saveImage($request)
+    {
+        $this->image = $request->file('post_image');
+        $this->imageName = rand().'.'.$this->image->getClientOriginalExtension();
+        $this->directory = 'upload/blogs/';
+        $this->imageUrl = $this->directory . $this->imageName;
+        $this->image->move($this->directory, $this->imageName);
+        return $this->imageUrl;
     }
 
     /**
@@ -107,35 +111,28 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public $post;
     public function update(Request $request, $id)
     {
-        $post = Post::find($id);
-        $post->title = $request->title;
-        $post->slug = Str::slug($request->title,'-');
-        $post->category_id = $request->category_id;
-        $post->excerpt = $request->excerpt;
-        $post->body = $request->body;
 
-        if($request->has('thumbnail'))
-        {
-            $thumbnail = $request->file('thumbnail');
+        $this->post = Post::find($id);
+        $this->post->title = $request->title;
+        $this->post->slug = Str::slug($request->title,'-');
+        $this->post->category_id = $request->category_id;
+        $this->post->excerpt = $request->excerpt;
+        $this->post->body = $request->body;
+        $this->post->user_id = auth()->id();
+        $this->post->post_status = $request->post_status;
+        $this->post->post_type = $request->post_type;
 
-            $file_extension = $thumbnail->getClientOriginalExtension();
-            $filename = time().'.'.$file_extension;
-            $destiantion = "uploads/images";
-            $path = $thumbnail->move($destiantion,$filename);
-
-
-            $post->image()->update([
-                'name' => $filename,
-                'extension' => $file_extension,
-                'path' => $path
-            ]);
+        if($request->file('post_image')){
+            if(file_exists($this->post->post_image)){
+                unlink($this->post->post_image);
+            }
+            $this->post->post_image = $this->saveImage($request);
         }
-
-        if($post->save()){
-            return redirect()->back()->with('success', 'Blog Update Successfully');
-        }
+        $this->post->save();
+        return redirect()->back()->with('success', 'Blog Update Successfully');
 
     }
 
@@ -145,11 +142,15 @@ class AdminPostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $post = Post::find($id);
-        $post->image()->delete();
-        $post->delete();
-        return redirect()->back()->with('success', 'Blog Delete Successfully');
+
+    public function destroy( $id){
+        $this->post = Post::find($id);
+        if($this->post->post_image){
+            if(file_exists($this->post->post_image)){
+                unlink($this->post->post_image);
+            }
+        }
+        $this->post->delete();
+        return redirect()->back()->with('success', 'Blog Deleted Successfully');
     }
 }

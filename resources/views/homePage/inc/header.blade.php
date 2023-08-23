@@ -140,7 +140,7 @@
                                 <ul class="sub-menu font-small">
 
                                     @if(auth()->user()->role_id == 2)
-                                        <li class=""><a href="{{route('back')}}">Admin Panel</a></li>
+                                        <li class=""><a href="{{route('admin.index')}}">Admin Panel</a></li>
                                     @endif
 
                                     <li class=""><a onclick="event.preventDefault(); document.getElementById('nav-logout').submit()" href="#">Logout</a>
