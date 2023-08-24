@@ -40,22 +40,44 @@ class MakeAdminController extends Controller
         $user = User::find($id);
         return view('admin.admin.edit_admin',compact('user'));
     }
-    public function update(Request $request){
+    public function update(Request $request, $id){
         $request->validate([
             'name'=>'required',
             'email'=>'required|unique:users,email',
         ]);
-        $this->user = User::find(auth()->user()->id);
+        $this->user = User::find($id);
         $this->user->name = $request->name;
         $this->user->email = $request->email;
+        $this->user->user_description = $request->user_description;
+        $this->user->user_title = $request->user_title;
         $this->user->password = bcrypt($request->password);
+
+        if($request->file('user_image')){
+            if(file_exists($this->user->user_image)){
+                unlink($this->user->user_image);
+            }
+            $this->user->user_image = $this->saveImage($request);
+        }
+
         $this->user->save();
         return redirect()->back()->with('success','Admin Data Updated');
 
     }
+
     public function delete($id){
         $this->user = User::find($id);
         $this->user->delete();
         return redirect()->back()->with('success','Admin Deleted Successfully');
+    }
+
+    public $image, $imageName, $imageUrl, $directory;
+    public function saveImage($request)
+    {
+        $this->image = $request->file('user_image');
+        $this->imageName = rand().'.'.$this->image->getClientOriginalExtension();
+        $this->directory = 'upload/user/';
+        $this->imageUrl = $this->directory . $this->imageName;
+        $this->image->move($this->directory, $this->imageName);
+        return $this->imageUrl;
     }
 }

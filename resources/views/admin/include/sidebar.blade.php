@@ -4,7 +4,7 @@
             <img src="{{asset('backEnd')}}/assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
         </div> -->
         <div>
-            <h4 class="logo-text" style="color: #194376;">EMO<span style="color: #46C6CE;">BETTING</span></h4>
+            <span class="logo-text" style="color: #194376;">{{$website->name}}</span></span>
         </div>
         <div class="toggle-icon ms-auto"><i class='bx bx-arrow-to-left'></i>
         </div>

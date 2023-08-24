@@ -29,7 +29,6 @@ class AdminUserController extends Controller
         if ($request->file('image')!=null){
             $this->admin->image = $this->saveImage($request);
         }
-
         $this->admin->save();
         return redirect()->back()->with('success', 'Profile Updated Successfully');
 

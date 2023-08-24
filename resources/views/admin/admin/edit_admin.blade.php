@@ -25,7 +25,7 @@
                         <div class="card">
                             <h2>Change Details For {{$user->name}}</h2>
                             <div class="card-body">
-                                <form action="{{route('admin.admin.update')}}" method="post">
+                                <form action="{{route('admin.admin.update',['id'=>$user->id])}}" method="post">
                                     @csrf
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
@@ -38,9 +38,10 @@
                                     </div>
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Email Address</h6>
+                                            <h6 class="mb-0">Email Address </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
+                                            <small>(Please change email and Password, whenever you change this admin data)</small>
                                             <input type="text" name="email" class="form-control" value="{{$user->email}}" />
                                         </div>
                                     </div>
@@ -49,7 +50,25 @@
                                             <h6 class="mb-0">Password</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
+                                            <small>(Please change email and Password, whenever you change this admin data)</small>
                                             <input type="text" name="password" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Description</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <textarea name="user_description" id="" class="form-control" cols="5" rows="5">{{$user->user_description}}</textarea>
+
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">User Title</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" name="user_title" class="form-control" value="{{$user->user_title}}" />
                                         </div>
                                     </div>
                                     <div class="row">

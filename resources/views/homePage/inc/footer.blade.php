@@ -1,7 +1,7 @@
 <footer class="pt-50 pb-20 bg-grey">
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="sidebar-widget wow fadeInUp animated mb-30">
                     <div class="widget-header-2 position-relative mb-30">
                         <h5 class="mt-5 mb-30">About me</h5>
@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 col-md-6">
+            <div class="col-lg-4 col-md-6">
                 <div class="sidebar-widget widget_categories wow fadeInUp animated mb-30" data-wow-delay="0.1s">
                     <div class="widget-header-2 position-relative mb-30">
                         <h5 class="mt-5 mb-30">Quick link</h5>
@@ -31,22 +31,6 @@
                         <li class="cat-item cat-item-2"><a href="#">{{$row->page_title}}</a></li>
                         @endforeach
                     </ul>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="sidebar-widget widget_tagcloud wow fadeInUp animated mb-30" data-wow-delay="0.2s">
-                    <div class="widget-header-2 position-relative mb-30">
-                        <h5 class="mt-5 mb-30">Tagcloud</h5>
-                    </div>
-                    <div class="tagcloud mt-50">
-                        <a class="tag-cloud-link" href="category.html">beautiful</a>
-                        <a class="tag-cloud-link" href="category.html">New York</a>
-                        <a class="tag-cloud-link" href="category.html">droll</a>
-                        <a class="tag-cloud-link" href="category.html">intimate</a>
-                        <a class="tag-cloud-link" href="category.html">loving</a>
-                        <a class="tag-cloud-link" href="category.html">travel</a>
-                        <a class="tag-cloud-link" href="category.html">fighting </a>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">

@@ -32,25 +32,25 @@ Route::get('/sing/{blog:slug}',[HomeController::class, 'post'])->name('post.sing
 Route::get('/cate/{category:slug}', [HomeController::class, 'category'])->name('home.category');
 
 Route::post('/subscribe',[SubscribeController::class, 'store'])->name('add.subscribe');
+Route::GET('/search',[HomeController::class,'search'])->name('search.post');
 
 
-
-Route::get('/arbitrage-calculator',[HomeController::class, 'arc'])->name('home.arc');
-Route::get('/arbitrage-guide',[HomeController::class, 'arcguide'])->name('home.arcguide');
-Route::get('/arbitrage-opportunities',[HomeController::class, 'oop'])->name('home.oop');
-Route::get('/contact',[HomeController::class, 'contact'])->name('home.contact');
-Route::get('/faq',[HomeController::class, 'faq'])->name('home.faq');
-
-
-
-Route::get('/blogs',[HomeController::class, 'blogs'])->name('blog');
-
-Route::get('/blog/{blog:slug}',[PostController::class, 'showBlog'])->name('blog.show');
-
-Route::post('/comment-submit/{post}',[PostController::class, 'addComment'])->name('add.comment');
-
-Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
-Route::get('/tag/{tag:name}', [TagController::class, 'show'])->name('tags.show');
+//Route::get('/arbitrage-calculator',[HomeController::class, 'arc'])->name('home.arc');
+//Route::get('/arbitrage-guide',[HomeController::class, 'arcguide'])->name('home.arcguide');
+//Route::get('/arbitrage-opportunities',[HomeController::class, 'oop'])->name('home.oop');
+//Route::get('/contact',[HomeController::class, 'contact'])->name('home.contact');
+//Route::get('/faq',[HomeController::class, 'faq'])->name('home.faq');
+//
+//
+//
+//Route::get('/blogs',[HomeController::class, 'blogs'])->name('blog');
+//
+//Route::get('/blog/{blog:slug}',[PostController::class, 'showBlog'])->name('blog.show');
+//
+//Route::post('/comment-submit/{post}',[PostController::class, 'addComment'])->name('add.comment');
+//
+//Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
+//Route::get('/tag/{tag:name}', [TagController::class, 'show'])->name('tags.show');
 
 
 
@@ -97,7 +97,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth','isadmin')->group(func
     Route::get('/admin/show',[MakeAdminController::class,'index'])->name('admin.show');
 
     Route::get('/admin/show/edit/{id}',[MakeAdminController::class,'edit'])->name('admin.edit');
-    Route::post('/admin/show/update',[MakeAdminController::class,'update'])->name('admin.update');
+    Route::post('/admin/show/update/{id}',[MakeAdminController::class,'update'])->name('admin.update');
 
     Route::get('/admin/show/create',[MakeAdminController::class,'create'])->name('admin.create');
     Route::get('/admin/show/delete/{id}',[MakeAdminController::class,'delete'])->name('admin.delete');

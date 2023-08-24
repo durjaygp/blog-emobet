@@ -11,7 +11,7 @@
     <meta name="url" content="{{$website->url}}" />
     <meta name="google-site-verification" content="{{$website->google}}">
     <title>@yield('title')</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('static')}}/assets/imgs/theme/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset($website->fav_icon)}}">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/style.css">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/widgets.css">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/responsive.css">

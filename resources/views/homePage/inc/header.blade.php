@@ -14,73 +14,73 @@
                 </ul>
             </div>
         </div>
-        <!--Latest-->
-        <div class="sidebar-widget widget-latest-posts mb-50">
-            <div class="widget-header-2 position-relative mb-30">
-                <h5 class="mt-5 mb-30">Don't miss</h5>
-            </div>
-            <div class="post-block-list post-module-1 post-module-5">
-                <ul class="list-post">
-                    <li class="mb-30">
-                        <div class="d-flex hover-up-2 transition-normal">
-                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                <a class="color-white" href="single.html">
-                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="post-content media-body">
-                                <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The Life of a Travel Writer with David Farley</a></h6>
-                                <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                    <span class="post-on">05 August</span>
-                                    <span class="post-by has-dot">300 views</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mb-30">
-                        <div class="d-flex hover-up-2 transition-normal">
-                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                <a class="color-white" href="single.html">
-                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="post-content media-body">
-                                <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Why Don’t More Black American Women Travel Solo?</a></h6>
-                                <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                    <span class="post-on">12 August</span>
-                                    <span class="post-by has-dot">23k views</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mb-30">
-                        <div class="d-flex hover-up-2 transition-normal">
-                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
-                                <a class="color-white" href="single.html">
-                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="post-content media-body">
-                                <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The 22 Best Things to See and Do in Bangkok</a></h6>
-                                <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
-                                    <span class="post-on">27 August</span>
-                                    <span class="post-by has-dot">23k views</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!--Ads-->
-        <div class="sidebar-widget widget-ads">
-            <div class="widget-header-2 position-relative mb-30">
-                <h5 class="mt-5 mb-30">Advertise banner</h5>
-            </div>
-            <a href="https://themeforest.net/user/alithemes/portfolio" target="_blank">
-                <img class="advertise-img border-radius-5" src="{{asset('static')}}/assets/imgs/ads/ads-1.jpg" alt="">
-            </a>
-        </div>
+{{--        <!--Latest-->--}}
+{{--        <div class="sidebar-widget widget-latest-posts mb-50">--}}
+{{--            <div class="widget-header-2 position-relative mb-30">--}}
+{{--                <h5 class="mt-5 mb-30">Don't miss</h5>--}}
+{{--            </div>--}}
+{{--            <div class="post-block-list post-module-1 post-module-5">--}}
+{{--                <ul class="list-post">--}}
+{{--                    <li class="mb-30">--}}
+{{--                        <div class="d-flex hover-up-2 transition-normal">--}}
+{{--                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">--}}
+{{--                                <a class="color-white" href="single.html">--}}
+{{--                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-1.jpg" alt="">--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                            <div class="post-content media-body">--}}
+{{--                                <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The Life of a Travel Writer with David Farley</a></h6>--}}
+{{--                                <div class="entry-meta meta-1 float-left font-x-small text-uppercase">--}}
+{{--                                    <span class="post-on">05 August</span>--}}
+{{--                                    <span class="post-by has-dot">300 views</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
+{{--                    <li class="mb-30">--}}
+{{--                        <div class="d-flex hover-up-2 transition-normal">--}}
+{{--                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">--}}
+{{--                                <a class="color-white" href="single.html">--}}
+{{--                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-2.jpg" alt="">--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                            <div class="post-content media-body">--}}
+{{--                                <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">Why Don’t More Black American Women Travel Solo?</a></h6>--}}
+{{--                                <div class="entry-meta meta-1 float-left font-x-small text-uppercase">--}}
+{{--                                    <span class="post-on">12 August</span>--}}
+{{--                                    <span class="post-by has-dot">23k views</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
+{{--                    <li class="mb-30">--}}
+{{--                        <div class="d-flex hover-up-2 transition-normal">--}}
+{{--                            <div class="post-thumb post-thumb-80 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">--}}
+{{--                                <a class="color-white" href="single.html">--}}
+{{--                                    <img src="{{asset('static')}}/assets/imgs/news/thumb-3.jpg" alt="">--}}
+{{--                                </a>--}}
+{{--                            </div>--}}
+{{--                            <div class="post-content media-body">--}}
+{{--                                <h6 class="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">The 22 Best Things to See and Do in Bangkok</a></h6>--}}
+{{--                                <div class="entry-meta meta-1 float-left font-x-small text-uppercase">--}}
+{{--                                    <span class="post-on">27 August</span>--}}
+{{--                                    <span class="post-by has-dot">23k views</span>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <!--Ads-->--}}
+{{--        <div class="sidebar-widget widget-ads">--}}
+{{--            <div class="widget-header-2 position-relative mb-30">--}}
+{{--                <h5 class="mt-5 mb-30">Advertise banner</h5>--}}
+{{--            </div>--}}
+{{--            <a href="https://themeforest.net/user/alithemes/portfolio" target="_blank">--}}
+{{--                <img class="advertise-img border-radius-5" src="{{asset('static')}}/assets/imgs/ads/ads-1.jpg" alt="">--}}
+{{--            </a>--}}
+{{--        </div>--}}
     </div>
 </aside>
 <!-- Start Header -->
@@ -192,9 +192,9 @@
             </div>
             <div class="float-right header-tools text-muted font-small">
                 <ul class="header-social-network d-inline-block list-inline mr-15">
-                    <li class="list-inline-item"><a class="social-icon fb text-xs-center" target="_blank" href="#"><i class="elegant-icon social_facebook"></i></a></li>
-                    <li class="list-inline-item"><a class="social-icon tw text-xs-center" target="_blank" href="#"><i class="elegant-icon social_twitter "></i></a></li>
-                    <li class="list-inline-item"><a class="social-icon pt text-xs-center" target="_blank" href="#"><i class="elegant-icon social_pinterest "></i></a></li>
+                    @foreach($socials as $row)
+                        <li class="list-inline-item"><a class="pt" href="{{$row->social_link}}" target="_blank" title="Facebook"><i class="{{$row->social_icon}}"></i></a></li>
+                    @endforeach
                 </ul>
                 <div class="off-canvas-toggle-cover d-inline-block">
                     <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
@@ -214,9 +214,9 @@
             <div class="row mb-20">
                 <div class="col-12 align-self-center main-search-form-cover m-auto">
                     <p class="text-center"><span class="search-text-bg">Search</span></p>
-                    <form action="#" class="search-header">
+                    <form action="{{route('search.post')}}" class="search-header" method="get">
                         <div class="input-group w-100">
-                            <input type="text" class="form-control" placeholder="Search stories, places and people">
+                            <input type="text" class="form-control" name="search" placeholder="Search stories, places and people">
                             <div class="input-group-append">
                                 <button class="btn btn-search bg-white" type="submit">
                                     <i class="elegant-icon icon_search"></i>

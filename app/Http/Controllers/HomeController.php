@@ -92,21 +92,13 @@ class HomeController extends Controller
     }
 
 
-    public function arc(){
-        return view('frontEnd.pages.arc');
-    }
-    public function arcguide(){
-        return view('frontEnd.pages.arcguide');
-    }
-    public function oop(){
-        return view('frontEnd.pages.oop');
-    }
-    public function contact(){
-        return view('frontEnd.pages.contact');
-    }
-    public function faq(){
-        return view('frontEnd.pages.faq');
-    }
+     public function search(Request $request){
+         $search = $request->search;
+         $blogs = Post::where('title','like','%'.$request->search.'%')->where('body','like','%'.$request->search.'%')->paginate(9);
+            return view('homePage.search.search',compact('blogs','search'));
+
+     }
+
 
 
 

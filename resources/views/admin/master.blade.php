@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{asset('panel')}}/assets/images/favicon-32x32.png" type="image/png"/>
+    <link rel="icon" href="{{asset($website->fav_icon)}}" type="image/png"/>
     <!--plugins-->
     <link href="{{asset('panel')}}/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet"/>
     <link href="{{asset('panel')}}/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />

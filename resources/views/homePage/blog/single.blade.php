@@ -26,8 +26,8 @@
                             </p>
                             <div class="entry-meta align-items-center meta-2 font-small color-muted">
                                 <p class="mb-5">
-                                    <a class="author-avatar" href="#"><img class="img-circle" src="{{asset($post->author->user_image)}}" alt=""></a>
-                                    By <a href="author.html"><span class="author-name font-weight-bold">{{$post->author->name}}</span></a>
+                                    <a class="author-avatar" href="#"><img class="img-circle" src="{{asset($admin->image)}}" alt=""></a>
+                                    By <a href="#"><span class="author-name font-weight-bold">{{$admin->name}}</span></a>
                                 </p>
                                 <span class="mr-10"> {{ $post->created_at->format('d M Y') }}</span>
                             </div>
@@ -101,14 +101,13 @@
                 <!--author box-->
                 <div class="author-bio p-30 mt-50 border-radius-10 bg-white wow fadeIn animated">
                     <div class="author-image mb-30">
-                        <a href="author.html"><img src="{{asset($post->author->user_image)}}" alt="" class="avatar"></a>
+                        <a href="#"><img src="{{asset($admin->image)}}" alt="" class="avatar"></a>
                     </div>
                     <div class="author-info">
                         <h4 class="font-weight-bold mb-20"><span class="vcard author">
-                                <span class="fn"><a href="author.html" title="Posted by Barbara Cartland" rel="author">{{$post->author->name}}</a></span></span>
+                                <span class="fn"><a href="#" title="Posted by Barbara Cartland" rel="author">{{$admin->name}}</a></span></span>
                         </h4>
-                        <h5 class="text-muted">{{$post->author->user_title}}</h5>
-                        <div class="author-description text-muted">{{$post->author->user_description}}</div>
+                        <div class="author-description text-muted">{{$admin->description}}</div>
                         <div class="author-social">
                             <ul class="author-social-icons">
                                 <li class="author-social-link-facebook"><a href="#" target="_blank"><i class="ti-facebook"></i></a></li>
@@ -145,7 +144,7 @@
                                     <div class="col-md-8 align-self-center">
                                         <div class="post-content">
                                             <div class="entry-meta meta-0 font-small mb-10">
-                                                <a href="category.html"><span class="post-cat text-primary">{{$blog->category->name}}</span></a>
+                                                <a href="#"><span class="post-cat text-primary">{{$blog->category->name}}</span></a>
                                             </div>
                                             <h5 class="post-title font-weight-900 mb-20">
                                                 <a href="{{route('post.single', $blog)}}">{{$blog->title}}</a>
