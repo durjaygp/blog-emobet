@@ -28,11 +28,15 @@ use App\Http\Controllers\AdsController;
 */
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
-Route::get('/sing/{blog:slug}',[HomeController::class, 'post'])->name('post.single');
-Route::get('/cate/{category:slug}', [HomeController::class, 'category'])->name('home.category');
+Route::get('/blog/{blog:slug}',[HomeController::class, 'post'])->name('post.single');
+Route::get('/category/{category:slug}', [HomeController::class, 'category'])->name('home.category');
+
+Route::get('/page/{slug}', [HomeController::class, 'page'])->name('home.page');
 
 Route::post('/subscribe',[SubscribeController::class, 'store'])->name('add.subscribe');
 Route::GET('/search',[HomeController::class,'search'])->name('search.post');
+Route::post('/comment-submit/{post}',[PostController::class, 'addComment'])->name('add.comment');
+
 
 
 //Route::get('/arbitrage-calculator',[HomeController::class, 'arc'])->name('home.arc');
@@ -47,7 +51,7 @@ Route::GET('/search',[HomeController::class,'search'])->name('search.post');
 //
 //Route::get('/blog/{blog:slug}',[PostController::class, 'showBlog'])->name('blog.show');
 //
-//Route::post('/comment-submit/{post}',[PostController::class, 'addComment'])->name('add.comment');
+
 //
 //Route::get('/category/{category:slug}', [CategoryController::class, 'show'])->name('category.show');
 //Route::get('/tag/{tag:name}', [TagController::class, 'show'])->name('tags.show');

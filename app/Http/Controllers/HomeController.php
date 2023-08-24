@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use App\Models\Category;
+use App\Models\Page;
 use App\Models\Post;
 use App\Models\Tag;
 use Illuminate\Http\Request;
@@ -98,6 +99,13 @@ class HomeController extends Controller
             return view('homePage.search.search',compact('blogs','search'));
 
      }
+
+     public function page($slug){
+         $page = Page::find($slug);
+        return view('homePage.page.index', compact('page'));
+     }
+
+
 
 
 

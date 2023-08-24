@@ -43,11 +43,10 @@
                                 <td>{{$com->user->name}}</td>
                                 <td>{{$com->user->email}}</td>
                                 <td>{{ \Str::limit($com->the_comment, 60) }}</td>
-                                <td><a href="{{route('blog.show',$com->post->slug)}}" class="btn btn-sm btn-primary">Visit</a></td>
+                                <td><a href="{{route('post.single',$com->post->slug)}}" target="_blank" class="btn btn-sm btn-primary">Visit</a></td>
                                 <td>{{ $com->created_at->diffForHumans() }}</td>
                                 <td>
                                     <div class="d-flex order-actions">
-
                                         <a href="{{route('admin.comments.delete',['id'=>$com->id])}}" class="ms-3"><i class="bx bxs-trash"></i></a>
                                     </div>
                                 </td>
