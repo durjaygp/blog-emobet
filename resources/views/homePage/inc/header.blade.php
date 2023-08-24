@@ -96,7 +96,7 @@
                         <li class="list-inline-item menu-item-has-children"><a href="#">Pages</a>
                             <ul class="sub-menu font-small">
                                 @foreach($pages as $row)
-                                <li class=""><a href="{{route('home.page',['page'=> $row->slug])}}">{{$row->page_title}}</a></li>
+                                <li class=""><a href="{{route('home.page',['slug'=>$row->slug])}}">{{$row->page_title}}</a></li>
                                 @endforeach
                             </ul>
                         </li>
@@ -156,7 +156,7 @@
                         <li class="menu-item-has-children"><a href="#">Pages</a>
                             <ul class="sub-menu font-small">
                                 @foreach($pages as $row)
-                                    <li class=""><a href="#">{{$row->page_title}}</a></li>
+                                    <li class=""><a href="{{route('home.page',['slug'=>$row->slug])}}">{{$row->page_title}}</a></li>
                                 @endforeach
                             </ul>
                         </li>

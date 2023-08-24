@@ -101,7 +101,7 @@ class HomeController extends Controller
      }
 
      public function page($slug){
-         $page = Page::find($slug);
+         $page = Page::where('slug', $slug)->first();
         return view('homePage.page.index', compact('page'));
      }
 

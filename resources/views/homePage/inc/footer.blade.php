@@ -28,7 +28,7 @@
                     </div>
                     <ul class="font-small">
                         @foreach($pages as $row)
-                        <li class="cat-item cat-item-2"><a href="#">{{$row->page_title}}</a></li>
+                        <li class="cat-item cat-item-2"><a href="{{route('home.page',['slug'=>$row->slug])}}">{{$row->page_title}}</a></li>
                         @endforeach
                     </ul>
                 </div>
