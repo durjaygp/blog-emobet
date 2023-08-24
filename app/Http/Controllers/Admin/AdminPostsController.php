@@ -65,6 +65,8 @@ class AdminPostsController extends Controller
        $this->blog->category_id = $request->category_id;
        $this->blog->post_status = $request->post_status;
        $this->blog->post_type = $request->post_type;
+       $this->blog->post_meta_tags = $request->post_meta_tags;
+       $this->blog->post_meta_title = $request->post_meta_title;
        $this->blog->save();
        return redirect()->back()->with('success', 'Blog Created Successfully');
     }
@@ -124,6 +126,8 @@ class AdminPostsController extends Controller
         $this->post->user_id = auth()->id();
         $this->post->post_status = $request->post_status;
         $this->post->post_type = $request->post_type;
+        $this->post->post_meta_tags = $request->post_meta_tags;
+        $this->post->post_meta_title = $request->post_meta_title;
 
         if($request->file('post_image')){
             if(file_exists($this->post->post_image)){

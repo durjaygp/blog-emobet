@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="{{$website->author}}"/>
-    <meta name="description" content="{{$website->description}}" />
     <meta name="keywords" content="{{$website->keywords}}" />
-    <meta name="tags" content="{{$website->tags}}" />
     <meta name="url" content="{{$website->url}}" />
     <meta name="google-site-verification" content="{{$website->google}}">
+    <meta name="">
     <title>@yield('title')</title>
+    <meta name="tags" content="{{$website->tags}}" />
+    <meta name="description" content="{{$website->description}}" />
+
+    @yield('meta')
     <link rel="shortcut icon" type="image/x-icon" href="{{asset($website->fav_icon)}}">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/style.css">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/widgets.css">

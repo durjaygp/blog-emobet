@@ -60,6 +60,15 @@
                                     <textarea name="body" id="div_editor1" name="body">{{old("body")}}</textarea>
                                 </div>
 
+                                <div class="mb-3">
+                                    <label for="inputProductTitle" class="form-label"><h6>Blog Meta Title<span class="text-danger">*</span></h6></label>
+                                    <input type="text" name="post_meta_title" value="{{old("post_meta_title")}}" class="form-control" id="inputProductTitle" placeholder="Blog Meta Title Example: How to Start a Blog">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputProductTitle" class="form-label"><h6>Blog Meta Tags<span class="text-danger">*</span></h6></label>
+                                    <input type="text" name="post_meta_tags" value="{{old("post_meta_tags")}}" class="form-control" id="inputProductTitle" placeholder="Blog Meta Tags example: keywords research, link building, SEO tools, off-page optimization, local SEO">
+                                </div>
+
                                 <div class="row">
                                     <div class="col-md-6 ">
                                         <label for="inputProductDescription" class="form-label"><h6>Select Post Status<span class="text-danger">*</span></h6></label>
@@ -79,6 +88,7 @@
                                         </select>
                                     </div>
                                 </div>
+
 
                                 <div class="m-2">
                                     <input type="submit" value="submit" class="btn btn-success px-5 radius-30">

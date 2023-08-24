@@ -2,6 +2,10 @@
 @section('title')
 {{$post->title}}
 @endsection
+@section('meta')
+    <meta name="tags" content="{{$post->post_meta_tags}}" />
+    <meta name="description" content="{{$post->post_meta_title}}" />
+@endsection
 @section('content')
     <main class="bg-grey pb-30">
 

@@ -25,6 +25,8 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->string('post_status')->nullable();
             $table->string('post_type')->nullable();
+            $table->text('post_meta_tags')->nullable();
+            $table->text('post_meta_title')->nullable();
 
             $table->timestamps();
         });

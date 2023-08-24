@@ -71,11 +71,21 @@
                                 </div>
 
 
-
                                 <div class="form-group">
                                     <label><h6>Blog Description<span class="text-danger">*</span></h6></label>
-                                    <textarea id="post_content" name="body">{{$blogs->body}}</textarea>
+                                    <textarea id="div_editor1" name="body">{{$blogs->body}}</textarea>
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="inputProductTitle" class="form-label"><h6>Blog Meta Title<span class="text-danger">*</span></h6></label>
+                                    <input type="text" name="post_meta_title" value="{{$blogs->post_meta_title}}" class="form-control" id="inputProductTitle" placeholder="Blog Meta Title Example: How to Start a Blog">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputProductTitle" class="form-label"><h6>Blog Meta Tags<span class="text-danger">*</span></h6></label>
+                                    <input type="text" name="post_meta_tags" value="{{$blogs->post_meta_tags}}" class="form-control" id="inputProductTitle" placeholder="Blog Meta Tags example: keywords research, link building, SEO tools, off-page optimization, local SEO">
+                                </div>
+
+
 
                                 <div class="row">
                                     <div class="col-md-6 ">
