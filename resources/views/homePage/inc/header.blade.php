@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
     <button class="off-canvas-close"><i class="elegant-icon icon_close"></i></button>
     <div class="sidebar-inner">
