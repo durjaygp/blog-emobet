@@ -8,6 +8,10 @@ Hire Me: https://www.fiverr.com/durjaygp </h2>
 
 
 ## HomePage
-![Screenshot](Blog.png)
+![Screenshot](homepage.png)
+
+
+## Admin Panel
+![Screenshot](dashboard.png)
 
 
