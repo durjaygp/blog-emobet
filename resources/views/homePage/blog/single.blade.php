@@ -177,12 +177,10 @@
                         <div class="single-comment justify-content-between d-flex">
                             <div class="user justify-content-between d-flex">
                                 <div class="thumb">
+                                    <img src="{{ $comment->user ? asset($comment->user->user_image ?? 'backEnd.users.jpg') : asset('backEnd.users.jpg') }}" alt="User Image">
 
-                                        <img src="@if($comment->user->user_image)
-                                        {{ asset($comment->user->user_image) }}
-                                        @else
-                                        {{ asset('backEnd.users.jpg') }}
-                                        @endif" alt="User Image">
+
+                                 
 
 
                                 </div>
