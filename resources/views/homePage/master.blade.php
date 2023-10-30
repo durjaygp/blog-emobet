@@ -12,7 +12,6 @@
     <title>@yield('title')</title>
     <meta name="tags" content="{{$website->tags}}" />
     <meta name="description" content="{{$website->description}}" />
-
     @yield('meta')
     <link rel="shortcut icon" type="image/x-icon" href="{{asset($website->fav_icon)}}">
     <link rel="stylesheet" href="{{asset('static')}}/assets/css/style.css">

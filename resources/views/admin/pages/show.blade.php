@@ -17,7 +17,7 @@
                 </nav>
             </div>
             <div class="ms-auto">
-                <a href="{{route('admin.posts.index')}}" class="btn btn-primary">Page List</a>
+                <a href="{{route('admin.page.create')}}" class="btn btn-primary">Page List</a>
             </div>
         </div>
         <!--end breadcrumb-->
